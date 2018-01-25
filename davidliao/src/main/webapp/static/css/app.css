@@ -1,0 +1,141 @@
+/* html{
+ 	background-color:#2F2F2F; 
+} */
+html,
+body{
+	height: 100%;
+	background-color:white;
+	font-family: "candara";
+}
+
+#email:focus + #hint-message { 
+	display: block; 
+ 	background-color: #357BB5;
+	color: white;
+	padding: 5px 8px;
+}
+
+#hint-message { 
+	display: none; 
+}
+
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
+}
+
+.custom-text {
+	font-size: 16px; 
+	color: #39729b;
+}
+
+
+.field {
+	margin: 1px 15%;
+	padding: 0 0;
+}
+
+.field > h5 {
+	margin: 1px 0;
+}
+
+.nav > li > a {
+    transition: color 0.15s ease-in-out;	
+}
+
+.nav > li > a:hover{
+    color: #ADDFEA;
+}
+
+#mainWrapper {
+	height: 100%;
+	background-image: -webkit-gradient(
+	linear,
+	right bottom,
+	right top,
+	color-stop(0, #EDEDED),
+	color-stop(0.08, #EAEAEA),
+	color-stop(1, #2F2F2F),
+	color-stop(1, #AAAAAA)
+);
+background-image: -o-linear-gradient(top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, #AAAAAA 100%);
+background-image: -moz-linear-gradient(top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, #AAAAAA 100%);
+background-image: -webkit-linear-gradient(top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, #AAAAAA 100%);
+background-image: -ms-linear-gradient(top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, #AAAAAA 100%);
+background-image: linear-gradient(to top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, #AAAAAA 100%);
+}
+
+.floatRight{
+	float:right;
+	margin-right: 18px;
+}
+
+.has-error{
+	color:red;
+}
+
+.custom-width {
+    width: 80px !important;
+}
+
+/* body, #mainWrapper, .form-control{ */
+/* 	font-size:12px!important; */
+/* } */
+
+#mainWrapper {
+	/*height: 720px; Without explicit px values, % in children's does not work*/
+	height: 100vh; /*with Viewport-Percentage, we can handles all devices screens  */
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:10px;
+}
+
+.login-container {
+    margin-top: 130px;
+    width: 40%;
+    left: 30%;
+    position: absolute;
+}
+
+.login-card {
+    width: 80%;
+    margin: auto;
+}
+
+.login-form {
+    padding: 10%;
+}
+
+.authbar{
+	margin-bottom:15px;
+}
+
+.navbar {
+  background-color: #1F3D60;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:1;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.navbar-default .navbar-nav > .dropdown > a:hover .caret,
+.navbar-default .navbar-nav > .dropdown > a:focus .caret {
+    border-top-color: #333;
+    border-bottom-color: #333;
+}
+
+.name-bar{
+  padding-right:50px;
+  height: 20px;
+  padding-top: 20px;
+}
