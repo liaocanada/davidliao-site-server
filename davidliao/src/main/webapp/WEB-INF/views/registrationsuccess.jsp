@@ -21,10 +21,9 @@
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 			<li><a href=" <c:url value='/list'/>">Users</a></li>
-			<li><a href=" <c:url value='/services'/>">Services</a></li>
-			<li><a href=" <c:url value='/clients'/>">Clients</a></li>
+			<li><a href=" <c:url value='/achievements'/>">My Achievements</a></li>
+			<li><a href=" <c:url value='/projects'/>">My Projects</a></li>
 			<li><a href=" <c:url value='/contact'/>">Contact</a></li>
-<%-- 		<li><a href=" <c:url value='/news'/>">News</a></li>		 --%>		
 			
 			<!-- If not logged in, navbar will display login -->
 		    <sec:authorize access="hasRole('ROLE_ANONYMOUS')">

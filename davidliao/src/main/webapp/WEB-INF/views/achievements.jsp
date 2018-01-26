@@ -2,12 +2,11 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec"	uri="http://www.springframework.org/security/tags"%>
-
 <html>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Edit User</title>
+<title>Our Clients</title>
 
 <link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet" />
 <link href="<c:url value='/static/css/app.css' />" rel="stylesheet" />
@@ -16,6 +15,7 @@
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
 	<!-- Navigation Bar -->
 	<nav class="navbar" style="padding:5px 8%;">
@@ -52,50 +52,73 @@
 	<!--  Takes up the space of the fixed navbar -->
 	<div style="margin-top: 60px;"></div>
 	
-<!-- Services Description  -->	
-<div style="margin: 5px 10%;">
+	<!-- Clients Description  -->
+	<div style="margin: 20px 100px;">
 
-	<div class="container text-left" style="padding: 0px 20%">
-		<h2 class="text-center" style="font-size: 70px; color: #6ea6ca">SERVICES</h2>
-		<div style="height: 5px; width: 30%; background-color: #6ea6ca; margin: 0 auto;"> </div>
-		<br><br>
-
-		<p class="custom-text">Our goal is to provide 10 out of 10 Java solutions to any
-			problem. We have provided solutions for world-class companies like
-			IBM, Procom, and Shell Canada. We also provide services for the
-			federal government. We offer whole solutions, including project
-			development and infrastructure setup. Our employees are certified and hold the following
-			certifications:</p>
-	</div>
+		<div class="container text-left" style="padding: 0px 20%">
+			<h2 class="text-center" style="font-size: 70px; color: #6ea6ca">My Achievements</h2>
 			
-	<div class="container custom-text" style="margin: auto; width:600px; padding: 3% 0">
-		<ul>
-			<li>IBM Certified Administrator - WebSphere Application Server</li>
-			<li>IBM Certified Enterprise Developer - WebSphere Studio</li>
-			<li>IBM Certified Solution Developer - WebSphere Studio</li>
-			<li>IBM Certified Solution Developer - WebSphere Portal</li>
-			<li>Sun Certified Web Component Developer</li>
-			<li>Sun Certified Java Programmer</li>
-			<li>IBM Certified Developer - XML, OOAD/UML</li>
-			<li>IBM Certified Associate Developer - WebSphere Studio</li>
-		</ul>
-	</div>
-</div>
+			<div
+				style="height: 5px; width: 30%; background-color: #6ea6ca; margin: 0 auto;">
+			</div>
+			<br>
 
-<%-- <div style="margin: 0 auto; padding-top: 5%">
-	<div class="col-sm-4" style="width:10%;"></div>
-	<div class="col-sm-4" style="width: 26%;">
-		<img src="<c:url value="/static/images/services/pic1.png" />" style="width: 100%">
+			<p class="custom-text">We have provided solutions for all types of companies-private
+				and public. Here are a few of our clients:</p>
+		</div>
+
+		<div class="container custom-text" style="margin: auto; width: 400px;">
+			<ul>
+				<li>Oracle Certified Associate Java SE 8 Programmer</li>
+				<li>Passed AP Computer Science exam with a score of 5</li>
+				<li>Grade 11 - Outstanding Achievement in Computer Engineering</li>
+				<li>Grade 11 - Silver Medal (> 90 average)</li>
+				<li>Grade 10 - Outstanding Achievement in Guitar</li>
+				<li>Grade 10 - Silver Medal (> 90 average)</li>
+				<li>Emergency First Aid &amp; CPR - C</li>
+			</ul>
+		</div>
 	</div>
-	<div style="width: 1%;"></div>
-	<div class="col-sm-4" style="width: 26%;">
-		<img src="<c:url value='/static/images/services/pic2.png'/>" style="width: 100%" alt="a">
-	</div>
-	<div style="width: 1%;"></div>
-	<div class="col-sm-4" style="width: 26%;">
-		<img src="<c:url value='/static/images/services/pic3.png'/>" style="width: 100%">
-	</div>
-</div> --%>
 	
+	<!-- Logos of client companies -->
+	<div class="container" style="width: 50%; margin: auto;">
+		<div class="row">
+			<div class="col-md-4 thumbnail">
+				<a href="https://www.ibm.com/ca-en/">
+					<img src="<c:url value="/static/images/clients/ibm.png" />" style="width: 50%">
+				</a>
+			</div>
+			<div class="col-md-4 thumbnail">
+				<a href="https://www.shell.ca/">				
+					<img src="<c:url value="/static/images/clients/shell.png" />" style="width: 50%">
+				</a>
+			</div>
+
+			<div class="col-md-4 thumbnail">
+				<a href="https://www.canada.ca/en/health-canada.html">
+					<img src="<c:url value="/static/images/clients/hc.jpg" />" style="width: 50%">
+				</a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4 thumbnail">
+				<a href="https://www.cbsa-asfc.gc.ca/menu-eng.html">
+					<img src="<c:url value="/static/images/clients/cbsa.jpg" />" style="width: 50%">
+				</a>
+			</div>
+
+			<div class="col-md-4 thumbnail">
+				<a href="https://www.canada.ca/en/shared-services.html">
+					<img src="<c:url value="/static/images/clients/ssc.jpg" />" style="width: 50%">
+				</a>
+			</div>
+			<div class="col-md-4 thumbnail">
+				<a href="http://www.csps-efpc.gc.ca/index-eng.aspx">
+					<img src="<c:url value="/static/images/clients/csps.jpg" />" style="width: 50%">
+				</a>
+			</div>
+		</div>
+
+	</div>
 </body>
 </html>

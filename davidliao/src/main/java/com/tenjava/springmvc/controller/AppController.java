@@ -294,6 +294,18 @@ public class AppController {
 		return "services";
 	}
 	
+	@RequestMapping(value = "/achievements", method = RequestMethod.GET)
+	public String achievementsPage(ModelMap model) {
+		model.addAttribute("loggedinuser", getPrincipal());
+		return "achievements";
+	}
+	
+	@RequestMapping(value = "/projects", method = RequestMethod.GET)
+	public String projectsPage(ModelMap model) {
+		model.addAttribute("loggedinuser", getPrincipal());
+		return "projects";
+	}
+	
 	/**
 	 * Handles clients page requests
 	 */
