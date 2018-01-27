@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 <script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 	<!-- Navigation Bar -->
@@ -53,7 +54,7 @@
 	<div style="margin-top: 60px;"></div>
 	
 <!-- Services Description  -->	
-<div style="margin: 5px 10%;">
+<div style="margin: 5px 10%;"></div>
 
 	<div class="container text-left" style="padding: 0px 20%">
 		<h2 class="text-center" style="font-size: 70px; color: #6ea6ca">My Projects</h2>
@@ -66,23 +67,51 @@
 			federal government. We offer whole solutions, including project
 			development and infrastructure setup. Our employees are certified and hold the following
 			certifications:</p>
-	</div>
-			
-	<div class="container custom-text" style="margin: auto; width:600px; padding: 3% 0">
-		<ul>
-			<li>IBM Certified Administrator - WebSphere Application Server</li>
-			<li>IBM Certified Enterprise Developer - WebSphere Studio</li>
-			<li>IBM Certified Solution Developer - WebSphere Studio</li>
-			<li>IBM Certified Solution Developer - WebSphere Portal</li>
-			<li>Sun Certified Web Component Developer</li>
-			<li>Sun Certified Java Programmer</li>
-			<li>IBM Certified Developer - XML, OOAD/UML</li>
-			<li>IBM Certified Associate Developer - WebSphere Studio</li>
-		</ul>
-	</div>
-</div>
 
-<%-- <div style="margin: 0 auto; padding-top: 5%">
+	<div class="panel-group" id="accordion">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion"
+						href="#collapse1"> Spring MVC Web Application</a>
+				</h4>
+			</div>
+			<div id="collapse1" class="panel-collapse collapse in">
+				<div class="panel-body">
+					<a href="https://google.ca">Link 1</a>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion"
+						href="#collapse2"> Ruby on Rails Online Store Project</a>
+				</h4>
+			</div>
+			<div id="collapse2" class="panel-collapse collapse">
+				<div class="panel-body">
+					<a href="https://google.ca">Link 2</a>
+				</div>
+			</div>
+		</div>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<h4 class="panel-title">
+					<a data-toggle="collapse" data-parent="#accordion"
+						href="#collapse3"> REST Project</a>
+				</h4>
+			</div>
+			<div id="collapse3" class="panel-collapse collapse">
+				<div class="panel-body">
+					<a href="https://google.ca">Link 3</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</div>
+	<%-- <div style="margin: 0 auto; padding-top: 5%">
 	<div class="col-sm-4" style="width:10%;"></div>
 	<div class="col-sm-4" style="width: 26%;">
 		<img src="<c:url value="/static/images/services/pic1.png" />" style="width: 100%">
