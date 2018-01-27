@@ -54,47 +54,63 @@
 	<!-- Home Page -->
 	<div>
 		<%-- <img src="<c:url value='/static/home.jpg' />" style= "width: 100%" /> --%>
-		<img src="<c:url value='/static/images/home.jpg' />" style= "width: 100%; height: 40%;" alt="HomePagePicture" />
+		<img src="<c:url value='/static/images/home.jpg' />" style= "width: 100%; height: 30%;" alt="HomePagePicture" />
 	</div>
 
 
-	<div style="margin-top: 30px; color: #d1e0eb">
+	<div style="margin-top: 15px; color: #d1e0eb">
 		<!-- Left Spacer -->
-		<div class="col-sm-1" style="width: 15%;"></div>
+		<div class="col-sm-1" style="width: 2.5%;"></div>
 		
 		<!-- Text Box 1 -->
-		<div align="center" class="bg-primary col-sm-6 text-white" style="width: 32.5%; background-color: #1F3D60; padding: 0px 40px">
-			<h3>MY ACHIEVEMENTS</h3><br>
-			<img src="<c:url value='/static/images/certificate.png' />" style= "width: 100%; height: 40%;" alt="Certificate" />
-			<ul>
-				<li>Oracle Certified Associate Java SE 8 Programmer</li>
-				<li>Passed AP Computer Science exam with a score of 5</li>
-				<li>Grade 11 - Outstanding Achievement in Computer Engineering</li>
-				<li>Grade 11 - Silver Medal (> 90 average)</li>
-				<li>Grade 10 - Outstanding Achievement in Guitar</li>
-				<li>Grade 10 - Silver Medal (> 90 average)</li>
-				<li>Emergency First Aid &amp; CPR - C</li>
-			</ul>
-			
-<%-- 			<a href="<c:url value='/services' />"
-				class="btn btn-info btn-block" role="button" style="background-color: #6FA0C7; width: 70%">More Info</a> <br>
- --%>		</div>
+		<div align="center" class="bg-primary col-sm-6 text-white" style="width: 46.25%; background-color: #1F3D60; padding: 0px 40px">
+			<h3>MY ACHIEVEMENTS</h3>
+			<div align="left">
+				<ul>
+					<li>Oracle Certified Associate Java SE 8 Programmer</li>
+					<li>Passed AP Computer Science exam with a score of 5</li>
+					<li>Grade 11 - Outstanding Achievement in Computer Engineering</li>
+					<li>Grade 11 - Silver Medal</li>
+					<li>Grade 10 - Outstanding Achievement in Guitar</li>
+					<li>Grade 10 - Silver Medal</li>
+					<li>Emergency First Aid &amp; CPR - C</li>
+				</ul>
+			</div>
+			<br><br>
+<%--  			<a href="<c:url value='/achievements' />"
+				class="btn btn-info btn-block" role="button" style="background-color: #6FA0C7; width: 70%">More Info</a> <br> --%>
+		</div>
 		
 		<!-- Center Spacer -->		
-		<div class="col-sm-1" style="width: 5%;"></div>
+		<div class="col-sm-1" style="width: 2.5%;"></div>
 		
 		<!-- Text Box 2 -->
-		<div align="center" class="bg-primary col-sm-6 text-white" style="width: 32.5%; background-color: #1F3D60; padding: 0px 40px">
-			<h3>MY PROJECTS</h3><br>
-			<p>
-				Building on strong customer service as foundational value, 5186180
-					Canada Corp. works with clients across Canada and the world with a
-					focus on Ottawa and the Ottawa Valley.
-			</p>
-			<br> <br>
-<%-- 			<a href="<c:url value='/clients' />"
-				class="btn btn-info btn-block" role="button" style="background-color: #6FA0C7; width: 70%">More Info</a> <br>
- --%>		</div>
+		<div class="bg-primary col-sm-6 text-white" style="width: 46.25%; background-color: #1F3D60; padding: 0px 40px 40px">
+			<h3 align="center">MY PROJECTS</h3>
+
+		<table class="table"
+			style="font-size: small; margin-bottom: 0px;">
+			<col width="30%">
+			<col width="70%">
+			<tr style="color: white;">
+				<td><button class="btn btn-block btn-primary">Spring
+						MVC</button></td>
+				<td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</td>
+			</tr>
+			<tr style="color: white;">
+				<td><button class="btn btn-block btn-primary">Spring
+						MVC</button></td>
+				<td>Last Name</td>
+			</tr>
+			<tr style="color: white;">
+				<td><button class="btn btn-block btn-primary">Spring
+						MVC</button></td>
+				<td>Last Name</td>
+			</tr>
+		</table>
+
+
+		</div>
 	</div>
 
 	<div class="col-sm-12" style="margin-top: 10px">

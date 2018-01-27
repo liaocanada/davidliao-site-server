@@ -62,9 +62,6 @@
 				style="height: 5px; width: 30%; background-color: #6ea6ca; margin: 0 auto;">
 			</div>
 			<br>
-
-			<p class="custom-text">We have provided solutions for all types of companies-private
-				and public. Here are a few of our clients:</p>
 		</div>
 
 		<div class="container custom-text" style="margin: auto; width: 400px;">
@@ -77,11 +74,12 @@
 				<li>Grade 10 - Silver Medal (> 90 average)</li>
 				<li>Emergency First Aid &amp; CPR - C</li>
 			</ul>
+ 		<img src="<c:url value="/static/images/achievements/oracle.jpg" />" style="width: 50%;">
 		</div>
 	</div>
 	
 	<!-- Logos of client companies -->
-	<div class="container" style="width: 50%; margin: auto;">
+<%-- 	<div class="container" style="width: 50%; margin: auto;">
 		<div class="row">
 			<div class="col-md-4 thumbnail">
 				<a href="https://www.ibm.com/ca-en/">
@@ -120,5 +118,9 @@
 		</div>
 
 	</div>
-</body>
+ --%>
+ 	<div class="col-md-4 thumbnail" style="margin: 0 auto; width: 60%;">
+ 	</div>
+ 
+ </body>
 </html>

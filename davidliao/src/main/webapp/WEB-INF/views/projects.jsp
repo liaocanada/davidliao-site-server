@@ -78,7 +78,7 @@
 			</div>
 			<div id="collapse1" class="panel-collapse collapse in">
 				<div class="panel-body">
-					<a href="https://google.ca">Link 1</a>
+					<a href="http://www.davidliao.ca">Link 1</a>
 				</div>
 			</div>
 		</div>
@@ -91,7 +91,7 @@
 			</div>
 			<div id="collapse2" class="panel-collapse collapse">
 				<div class="panel-body">
-					<a href="https://google.ca">Link 2</a>
+					<a href="http://www.davidliao.ca:3000">Link 2</a>
 				</div>
 			</div>
 		</div>

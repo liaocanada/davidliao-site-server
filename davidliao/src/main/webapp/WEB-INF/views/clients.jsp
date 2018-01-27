@@ -79,7 +79,7 @@
 	</div>
 	
 	<!-- Logos of client companies -->
-	<div class="container" style="width: 50%; margin: auto;">
+<%-- 	<div class="container" style="width: 50%; margin: auto;">
 		<div class="row">
 			<div class="col-md-4 thumbnail">
 				<a href="https://www.ibm.com/ca-en/">
@@ -117,6 +117,6 @@
 			</div>
 		</div>
 
-	</div>
+	</div> --%>
 </body>
 </html>

@@ -61,7 +61,7 @@
 		<div class="col-sm-4 text-center" style="width: 100%; margin: auto; color: white;">
 			<br><br><br><br><br><br><br><br>
 			<h4>If you have any questions please send us an email:</h4>
-			<i class="material-icons">mail</i> <b>contact@10java.com</b>
+			<i class="material-icons">mail</i> <b>contact@davidliao.ca</b>
 	
 		</div>
 	</div>
