@@ -1,33 +1,33 @@
 package com.tenjava.springmvc.controller;
 
-import java.util.List;
+/*import java.util.List;
 import java.util.Locale;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.validation.Valid;
+import javax.validation.Valid;*/
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.security.authentication.AuthenticationTrustResolver;
-import org.springframework.security.core.Authentication;
+/*import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetails;*/
 import org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
+/*import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PathVariable;*/
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
+//import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.tenjava.springmvc.dao.UserDao;
-import com.tenjava.springmvc.model.User;
-import com.tenjava.springmvc.model.UserProfile;
+/*import com.tenjava.springmvc.model.User;
+import com.tenjava.springmvc.model.UserProfile;*/
 import com.tenjava.springmvc.service.UserProfileService;
 import com.tenjava.springmvc.service.UserService;
 
@@ -70,7 +70,7 @@ public class AppController {
 	AuthenticationTrustResolver authenticationTrustResolver;
 	
 	
-	/**
+/*	*//**
 	 * This method will list all existing users.
 	 * @param model A container for model objects.
 	 * @param sortParam Parameter to sort the users by.
@@ -83,7 +83,7 @@ public class AppController {
 	 * @param startDate Earliest date of date range.
 	 * @param endDate Latest date of date range.
 	 * @return A view name, representing the next page to be viewed.
-	 */
+	 *//*
 	@RequestMapping(value = { "/list" }, method = RequestMethod.GET)
 	public String listUsers(ModelMap model, 
 			@RequestParam(value="sortParam", defaultValue="firstName", required=false) String sortParam, 
@@ -107,9 +107,9 @@ public class AppController {
 		return "userslist";
 	}
 
-	/**
+	*//**
 	 * This method will provide the medium to add a new user.
-	 */
+	 *//*
 	@RequestMapping(value = { "/newuser" }, method = RequestMethod.GET)
 	public String newUser(ModelMap model) {
 		User user = new User();
@@ -123,10 +123,10 @@ public class AppController {
 		return "registration";
 	}
 
-	/**
+	*//**
 	 * This method will be called on form submission, handling POST request for
 	 * saving user in database. It also validates the user input
-	 */
+	 *//*
 	@RequestMapping(value = { "/newuser" }, method = RequestMethod.POST)
 	public String saveUser(@Valid User user, BindingResult result,
 			ModelMap model) {
@@ -159,9 +159,9 @@ public class AppController {
 	}
 
 
-	/**
+	*//**
 	 * This method will provide the medium to update an existing user.
-	 */
+	 *//*
 	@RequestMapping(value = { "/edit-user-{ssoId}" }, method = RequestMethod.GET)
 	public String editUser(@PathVariable String ssoId, ModelMap model) {
 		//Calls service
@@ -176,9 +176,9 @@ public class AppController {
 		return "registration";
 	}
 	
-	/**
+	*//**
 	 * This method will be called on form submission for updating a user.
-	 */
+	 *//*
 	@RequestMapping(value = { "/edit-user-{ssoId}" }, method = RequestMethod.POST)
 	public String updateUser(@Valid User user, BindingResult result,
 			ModelMap model, @PathVariable String ssoId) {
@@ -211,9 +211,9 @@ public class AppController {
 	}
 
 	
-	/**
+	*//**
 	 * This method will delete an user by its SSO ID.
-	 */
+	 *//*
 	@RequestMapping(value = { "/delete-user-{ssoId}" }, method = RequestMethod.GET)
 	public String deleteUser(@PathVariable String ssoId) {
 		//Calls service
@@ -223,18 +223,18 @@ public class AppController {
 	}
 	
 
-	/**
+	*//**
 	 * This method adds all userProfiles to the roles attribute. It will be called 
 	 * when Session is created, as role is a mandatory session attribute
-	 */
+	 *//*
 	@ModelAttribute("roles") 
 	public List<UserProfile> initializeProfiles() {
 		return userProfileService.findAll();
 	}
 	
-	/**
+	*//**
 	 * This method handles automatic access-denied redirects.
-	 */
+	 *//*
 	@RequestMapping(value = "/Access_Denied", method = RequestMethod.GET)
 	public String accessDeniedPage(ModelMap model) {
 		//Add required models
@@ -243,12 +243,12 @@ public class AppController {
 		return "accessDenied";
 	}
 
-	/**
+	*//**
 	 * This method handles login requests.
 	 * 
 	 * In addition, if the user is already logged in and tries to access login page again
 	 * they will be redirected to the home page.
-	 */
+	 *//*
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String loginPage(HttpServletRequest request) {
 		if (isCurrentAuthenticationAnonymous()) {
@@ -257,67 +257,67 @@ public class AppController {
 	    	return "redirect:/home";  
 	    }
 	}
-
+*/
 	/**
 	 * Handles home page requests (both / and /home)
 	 */
 	@RequestMapping(value = { "/", "/home" }, method = RequestMethod.GET)
 	public String homePage(ModelMap model) {
-		model.addAttribute("loggedinuser", getPrincipal());
+//		model.addAttribute("loggedinuser", getPrincipal());
 		return "home";
 	}
 	
-	/**
+/*	*//**
 	 * Handles news page requests
-	 */
+	 *//*
 	@RequestMapping(value = "/news", method = RequestMethod.GET)
 	public String newsPage(ModelMap model) {
 		model.addAttribute("loggedinuser", getPrincipal());
 		return "news";
-	}
+	}*/
 	
 	/**
 	 * Handles contact page requests
 	 */
 	@RequestMapping(value = "/contact", method = RequestMethod.GET)
 	public String contactPage(ModelMap model) {
-		model.addAttribute("loggedinuser", getPrincipal());
+//		model.addAttribute("loggedinuser", getPrincipal());
 		return "contact";
 	}
 	
-	/**
+/*	*//**
 	 * Handles services page requests
-	 */
+	 *//*
 	@RequestMapping(value = "/services", method = RequestMethod.GET)
 	public String servicesPage(ModelMap model) {
 		model.addAttribute("loggedinuser", getPrincipal());
 		return "services";
-	}
+	}*/
 	
 	@RequestMapping(value = "/achievements", method = RequestMethod.GET)
 	public String achievementsPage(ModelMap model) {
-		model.addAttribute("loggedinuser", getPrincipal());
+//		model.addAttribute("loggedinuser", getPrincipal());
 		return "achievements";
 	}
 	
 	@RequestMapping(value = "/projects", method = RequestMethod.GET)
 	public String projectsPage(ModelMap model) {
-		model.addAttribute("loggedinuser", getPrincipal());
+//		model.addAttribute("loggedinuser", getPrincipal());
 		return "projects";
 	}
 	
-	/**
+/*	*//**
 	 * Handles clients page requests
-	 */
+	 *//*
 	@RequestMapping(value = "/clients", method = RequestMethod.GET)
 	public String clientsPage(ModelMap model) {
 		model.addAttribute("loggedinuser", getPrincipal());
 		return "clients";
 	}
 	
-	/**
+	*//**
 	 * Handles logout requests
-	 */
+	 *//*
 	@RequestMapping(value="/logout", method = RequestMethod.GET)
 	public String logoutPage (HttpServletRequest request, HttpServletResponse response){
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
@@ -326,11 +326,11 @@ public class AppController {
 			SecurityContextHolder.getContext().setAuthentication(null);
 		}
 		return "redirect:/login?logout";
-	}
+	}*/
 
-	/**
+/*	*//**
 	 * @return the SSO ID of the logged in user.
-	 */
+	 *//*
 	private String getPrincipal(){
 		String userName = null;
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
@@ -341,15 +341,15 @@ public class AppController {
 			userName = principal.toString();
 		}
 		return userName;
-	}
+	}*/
 	
-	/**
+/*	*//**
 	 * @return true if user is logged in, false if not
-	 */
+	 *//*
 	private boolean isCurrentAuthenticationAnonymous() {
 	    final Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 	    return authenticationTrustResolver.isAnonymous(authentication);
-	}
+	}*/
 
 
 }

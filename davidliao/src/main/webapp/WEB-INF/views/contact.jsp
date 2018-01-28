@@ -20,29 +20,9 @@
 			<li><a href="<c:url value='/home'/>">Home</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href=" <c:url value='/list'/>">Users</a></li>
 			<li><a href=" <c:url value='/achievements'/>">My Achievements</a></li>
 			<li><a href=" <c:url value='/projects'/>">My Projects</a></li>
 			<li><a href=" <c:url value='/contact'/>">Contact</a></li>
-			
-			<!-- If not logged in, navbar will display login -->
-		    <sec:authorize access="hasRole('ROLE_ANONYMOUS')">
-		        <li><a href="<c:url value="/login"/>">Login</a></li>
-		    </sec:authorize>
-		    <!-- Otherwise, navbar will display a dropdown menu -->
-		    <sec:authorize access="hasRole('ADMIN') or hasRole('DBA') or hasRole('USER')">
-			    <li class="dropdown" style="text-align: center; vertical-align: middle;">
-				    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-				    	<i class="material-icons" style="font-size:20px">account_circle</i>
-				    	<span class="caret"></span>
-				    </a>
-					<ul class="dropdown-menu">
-						<li><a>Logged in as: ${loggedinuser}</a></li>
-						<li><a href=" <c:url value='/edit-user-${loggedinuser}'/>">Edit My Profile</a></li>
-						<li><a href="<c:url value='/logout'/>">Log Out</a></li>
-					</ul>
-				</li>
-		    </sec:authorize>
 		</ul>
 	</nav>
 	

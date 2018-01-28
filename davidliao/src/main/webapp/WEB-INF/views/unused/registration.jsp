@@ -24,7 +24,6 @@ $(document).ready(function() {
 </script>
 
 </head>
-
 <body>
 	<!-- Navigation Bar -->
 	<nav class="navbar" style="padding:5px 8%;">
@@ -32,7 +31,6 @@ $(document).ready(function() {
 			<li><a href="<c:url value='/home'/>">Home</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href=" <c:url value='/list'/>">Users</a></li>
 			<li><a href=" <c:url value='/achievements'/>">My Achievements</a></li>
 			<li><a href=" <c:url value='/projects'/>">My Projects</a></li>
 			<li><a href=" <c:url value='/contact'/>">Contact</a></li>
