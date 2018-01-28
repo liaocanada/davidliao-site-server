@@ -8,6 +8,12 @@ body{
 	font-family: "candara";
 }
 
+.btn-home {
+	background-color: #6FA0C7;
+	color: white;
+	margin-top: 2%;
+}
+
 #email:focus + #hint-message { 
 	display: block; 
  	background-color: #357BB5;

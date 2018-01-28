@@ -66,15 +66,32 @@
 		<div align="center" class="bg-primary col-sm-6 text-white" style="width: 46.25%; background-color: #1F3D60; padding: 0px 40px">
 			<h3>MY ACHIEVEMENTS</h3>
 			<div align="left">
+			Java programming &amp; Java EE web development:
+			<ul>
+				<li>Passed the Oracle Java certification exam with 84%</li>
+				<li>Developed the presentation layer using JSP, Servlet, JavaScript, CSS, and HTML</li>
+				<li>Used JPA and Hibernate to aid data persistence in the application</li>
+				<li>Designed the application using Spring MVC Framework for easy maintainability</li>
+				<li>Used Log4j to create logs of application and aid in debugging the application</li>
+				<li>Created JUnit test cases to cover unit testing for the components</li>
+				<li>Joined a co-op program at inBay Technologies to develop a Java EE web application</li>
+			</ul>
+			
+			System Administrator:
+			<ul>
+				<li>Google Cloud VM instance</li>
+				<li>Google Domains</li>
+				<li>Ubuntu Linux 16.04</li>
+				<li>Apache Tomcat 8.0</li>
+				<li>MySQL 5.7</li>
+			</ul>
+			Academics:
 				<ul>
-					<li>Oracle Certified Associate Java SE 8 Programmer</li>
 					<li>Passed AP Computer Science exam with a score of 5</li>
 					<li>Grade 11 - Outstanding Achievement in Computer Engineering</li>
-					<li>Grade 11 - Silver Medal</li>
-					<li>Grade 10 - Outstanding Achievement in Guitar</li>
-					<li>Grade 10 - Silver Medal</li>
-					<li>Emergency First Aid &amp; CPR - C</li>
+					<li>Grade 10 &amp; 11 - Silver Medal</li>
 				</ul>
+
 			</div>
 			<br><br>
 <%--  			<a href="<c:url value='/achievements' />"
@@ -89,23 +106,43 @@
 			<h3 align="center">MY PROJECTS</h3>
 
 		<table class="table"
-			style="font-size: small; margin-bottom: 0px;">
-			<col width="30%">
-			<col width="70%">
-			<tr style="color: white;">
-				<td><button class="btn btn-block btn-primary">Spring
-						MVC</button></td>
-				<td>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</td>
+			style="font-size: small; margin-bottom: 0px; color: white;">
+			<%-- <col width="30%">
+			<col width="70%"> --%>
+			<tr>
+				<td>
+					<h4>User Management System</h4> 
+					
+					Employee management system with CRUD functions, using Spring MVC, Spring Security 
+					and Hibernate. <br><br> 
+						
+					<strong>Environment: </strong> Eclipse IDE, Apache Tomcat 8.0, HTML, CSS, JavaScript, <br>
+					JSP/Servlet, Ubuntu Linux 16.04, MySQL Server 5.7, Spring MVC, Spring Security, Maven, <br>
+					Hibernate, JUnit, Bootstrap and jQuery <br><br>
+					Test username: tester | password: davidliao
+				
+				<div style="text-align: center;"><a class="btn btn-home" href="http://davidliao.ca/company/list" role="button">
+					Click here to try</a>
+				</div>
 			</tr>
-			<tr style="color: white;">
-				<td><button class="btn btn-block btn-primary">Spring
-						MVC</button></td>
-				<td>Last Name</td>
-			</tr>
-			<tr style="color: white;">
-				<td><button class="btn btn-block btn-primary">Spring
-						MVC</button></td>
-				<td>Last Name</td>
+			<tr>
+				<td>
+					<h4>Shopping Cart</h4>
+					Shopping cart demo with Ruby on Rails.<br><br>
+					<strong>Environment: </strong> JetBrains RubyMine IDE, Ruby, Ruby on Rails <br>
+					<div style="text-align: center;"><a class="btn btn-home" href="http://davidliao.ca:3000" role="button">
+						Click here to try</a>
+					</div>
+				</td>
+			<tr>
+				<td>
+					<h4>RESTful</h4>
+					Texttexttext<br><br>
+					<strong>Environment: </strong> ...
+					<div style="text-align: center;"><a class="btn btn-home" href="https://docs.google.com/presentation/d/15-P39t9ycIUUMqi7Mu9bg1z7OFD-kq-8GY6N2EVlWOM/edit?usp=sharing" role="button">
+						Click here to try</a>
+					</div>
+				</td>
 			</tr>
 		</table>
 
