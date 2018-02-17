@@ -291,6 +291,21 @@ public class AppController {
 		return "contact";
 	}
 	
+	@RequestMapping(value = "/karaoke", method = RequestMethod.GET)
+	public String karaokePage(ModelMap model) {
+		return "karaoke";
+	}
+	
+	@RequestMapping(value = "/hangman", method = RequestMethod.GET)
+	public String hangmanPage(ModelMap model) {
+		return "hangman";
+	}
+	
+	@RequestMapping(value = "/present", method = RequestMethod.GET)
+	public String presentsPage(ModelMap model) {
+		return "present";
+	}
+	
 /*	*//**
 	 * Handles services page requests
 	 *//*

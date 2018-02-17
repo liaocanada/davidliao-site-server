@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Edit User</title>
+<title>David's Swim Gallery (Powered by Shopify)</title>
 
 <link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet" />
 <link href="<c:url value='/static/css/app.css' />" rel="stylesheet" />
@@ -32,12 +32,16 @@
 	<!--  Takes up the space of the fixed navbar -->
 	<div style="margin-top: 60px;"></div>
 	
-<div style="margin: 30px 10%;">
-	<h4 style="font-size: 52px; color: #6ea6ca; text-align:center">Swim Gallery - David's Shopify online store</h4>
-		<div style="height: 5px; width: 14%; background-color: #6ea6ca; margin: 0 auto;"> </div>
+<div style="margin: 30px auto;" align="center">
+<!-- 	<p style="font-size: 27px; color: #6ea6ca; margin: 0;">David's Swim Gallery (Powered by Shopify)</p> -->
+<!-- 	<h4 style="margin: 0;">Powered by Shopify</h4> -->
+<!-- 		<div style="height: 5px; width: 14%; background-color: #6ea6ca; margin: 0 auto;"> </div> -->
 
- 	<div style="padding: 5% 0; /* width:75%; */ margin: 0 auto">
-		<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQXzTx-pzkt591jTDz-qZmQfLllDXePECgCxXuCJaeH3gW4jXo7QpH6vcZey1qqk2gzaGFs5o1hhq2G/embed?start=true&loop=true&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+ 	<div style="padding: 5px 0; /* width:75%; */ margin: 0 auto" align="center">
+		<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQXzTx-pzkt591jTDz-qZmQfLllDXePECgCxXuCJaeH3gW
+		4jXo7QpH6vcZey1qqk2gzaGFs5o1hhq2G/embed?start=true&loop=true&delayms=3000" frameborder="0" 
+		width="80%" height="85%" allowfullscreen="true" mozallowfullscreen="true" 
+		webkitallowfullscreen="true"></iframe>
 	</div>
 </div>
 

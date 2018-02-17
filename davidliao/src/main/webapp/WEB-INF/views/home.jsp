@@ -118,6 +118,17 @@
 
 					</td>
 				</tr>
+				<tr>
+					<td>
+						<h4 style="margin-top: 0px;">Current University Offers</h4>					
+						<ul>
+							<li>University of Toronto (St. George campus) - Bachelor of Computer Science</li>
+							<li>University of Toronto (Missisauga campus) - Bachelor of Computer Science + Mathematics and Statistics</li>
+							<li>Carleton University - Bachelor of Computer Science</li>
+							<li>University of Ottawa - Bachelor of Software Engineering</li>
+						</ul>
+					</td>
+				</tr>
 			</table>
 			<br>
 			<br>
@@ -198,7 +209,54 @@
 						</div>
 					</td>
 				</tr>
-<!-- 				<iframe width="560" height="315" src="https://www.youtube.com/embed/CYxwv1izP7Q?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+				<tr>
+					<td>
+						<h4 style="margin-top: 0px;">
+							Arduino/circuit board projects
+							<!-- Hangman Game (<a class="link-yellow" href="https://en.wikipedia.org/wiki/Hangman_(game)">about this game</a>) -->
+						</h4> 
+						Built and coded using an Arduino microcontroller, piezo buzzer, LCD screen,
+						and various buttons, connected with a breadboard.
+						
+						<div style="text-align: center; margin-bottom: 5px;">
+							<a class="btn btn-home"
+								href="<c:url value='/hangman'/>"
+								role="button">View Hangman game<br>(Multiple categories + difficulties)</a>
+							<a class="btn btn-home"
+								href="<c:url value='/karaoke'/>"
+								role="button">View Karaoke machine<br>(Plays music + displays lyrics simultaneously)</a>
+						</div>
+						
+		 			</td>
+		 		</tr>
+<%-- 		 		<tr>
+		 			<td>
+		 				<h4 style="margin-top: 0px;">
+							Karaoke Machine Simulator
+						</h4> 
+		 				Built and coded using an Arduino microcontroller, piezo buzzer, LCD screen,
+						and various buttons, connected with a breadboard. Plays music while displays synchronized lyrics 
+						using a single thread!
+						<div style="text-align: center; margin-bottom: 5px;">
+							<a class="btn btn-home"
+								href="<c:url value='/karaoke'/>"
+								role="button">View demo</a>
+						</div>
+					</td>
+				</tr> --%>
+				<tr>
+					<td>
+						<h4 style="margin-top: 0px;">
+							Volunteer Work - Laser Cutting
+						</h4>
+						Created and donated Christmas gifts to a senior home.
+						<div style="text-align: center; margin-bottom: 5px;">
+							<a class="btn btn-home" href="<c:url value='/present'/>"
+								role="button">View demo<br>
+							</a>
+						</div>
+					</td>
+				</tr>
 				
 			</table>
 
