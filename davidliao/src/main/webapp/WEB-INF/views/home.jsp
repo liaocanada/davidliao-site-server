@@ -51,12 +51,12 @@
 				style="font-size: small; margin-bottom: 0px; color: white;">
 				<tr>
 					<td>
-						<h4 style="margin-top: 0px;">Current University Offers</h4>					
+						<h4 style="margin-top: 0px;">Current University Offers</h4> <h4 style="color:red;">(All early acceptance)</h4>					
 						<ul>
-							<li>University of Toronto (St. George campus) - Bachelor of Computer Science</li>
-							<li>University of Toronto (Missisauga campus) - Bachelor of Computer Science + Mathematics and Statistics</li>
-							<li>Carleton University - Bachelor of Computer Science</li>
-							<li>University of Ottawa - Bachelor of Software Engineering</li>
+							<li>University of Toronto (St. George campus) - Bachelor of Computer Science (Feb 14, 2018)</li>
+							<li>University of Toronto (Missisauga campus) - Bachelor of Computer Science, Mathematics and Statistics (Feb 14, 2018)</li>
+							<li>Carleton University - Bachelor of Computer Science (Dec 11, 2017)</li>
+							<li>University of Ottawa - Bachelor of Software Engineering (Dec 7, 2017)</li>
 						</ul>
 					</td>
 				</tr>
