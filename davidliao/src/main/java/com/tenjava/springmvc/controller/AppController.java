@@ -1,33 +1,19 @@
 package com.tenjava.springmvc.controller;
 
-/*import java.util.List;
-import java.util.Locale;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.validation.Valid;*/
+import java.io.IOException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.security.authentication.AuthenticationTrustResolver;
-/*import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.userdetails.UserDetails;*/
 import org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-/*import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;*/
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-//import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.tenjava.springmvc.dao.UserDao;
-/*import com.tenjava.springmvc.model.User;
-import com.tenjava.springmvc.model.UserProfile;*/
+import com.tenjava.springmvc.dao.UserProfileDao;
 import com.tenjava.springmvc.service.UserProfileService;
 import com.tenjava.springmvc.service.UserService;
 
@@ -308,6 +294,7 @@ public class AppController {
 	
 /*	*//**
 	 * Handles services page requests
+ * @throws IOException 
 	 *//*
 	@RequestMapping(value = "/services", method = RequestMethod.GET)
 	public String servicesPage(ModelMap model) {
@@ -315,11 +302,68 @@ public class AppController {
 		return "services";
 	}*/
 	
-	@RequestMapping(value = "/achievements", method = RequestMethod.GET)
+	@RequestMapping(value = "/resume", method = RequestMethod.GET)
 	public String achievementsPage(ModelMap model) {
 //		model.addAttribute("loggedinuser", getPrincipal());
-		return "achievements";
+		return "resume";
 	}
+	
+//	@RequestMapping(value="/achievements", method=RequestMethod.GET)
+//	public ResponseEntity<byte[]> getPDF1() throws IOException {
+//
+//
+//	    HttpHeaders headers = new HttpHeaders();
+//
+//	    headers.setContentType(MediaType.parseMediaType("application/pdf"));
+//	    String filename = "resume.pdf";
+//
+//	    headers.add("content-disposition", "inline;filename=" + filename);
+//
+//	    headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");
+//	    
+//	    InputStream inputStream =
+//	    	    getClass().getClassLoader().getResourceAsStream("config.properties");
+//	    
+//	    byte[] bytes = IOUtils.toByteArray(is);
+//	    
+//	    ResponseEntity<byte[]> response = new ResponseEntity<byte[]>(inputStream, headers, HttpStatus.OK);
+//	    return response;
+//	}
+//	
+////	private static byte[] loadFile(String sourcePath) throws IOException
+////	{
+////	    InputStream inputStream = null;
+////	    try 
+////	    {
+////	        //inputStream = new FileInputStream(sourcePath);
+////	        
+////	         inputStream =
+////	        		 this.class.getClass().getClassLoader().getResourceAsStream(sourcePath);
+////	        
+////	        
+////	        return readFully(inputStream);
+////	    } 
+////	    finally
+////	    {
+////	        if (inputStream != null)
+////	        {
+////	            inputStream.close();
+////	        }
+////	    }
+////	}
+//	
+//	public static byte[] readFully(InputStream stream) throws IOException
+//	{
+//	    byte[] buffer = new byte[8192];
+//	    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//
+//	    int bytesRead;
+//	    while ((bytesRead = stream.read(buffer)) != -1)
+//	    {
+//	        baos.write(buffer, 0, bytesRead);
+//	    }
+//	    return baos.toByteArray();
+//	}	
 	
 	@RequestMapping(value = "/projects", method = RequestMethod.GET)
 	public String projectsPage(ModelMap model) {

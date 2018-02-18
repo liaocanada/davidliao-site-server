@@ -2,33 +2,17 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec"	uri="http://www.springframework.org/security/tags"%>
+<!DOCTYPE html>
 <html lang="en" style="background-color: #1F3D60;">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet" />
-<link href="<c:url value='/static/css/app.css' />" rel="stylesheet" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<title>Contact Us</title>
+	<title>Contact Me</title>
+	<jsp:include page="resources.jsp" />
 </head>
+
 <body style="background-color: #1F3D60;">
-	<!-- Navigation Bar -->
-	<nav class="navbar" style="padding:5px 8%;">
-		<ul class="nav navbar-nav">
-			<li><a href="<c:url value='/home'/>">Home</a></li>
-		</ul>
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href=" <c:url value='/achievements'/>">My Achievements</a></li>
-			<li><a href=" <c:url value='/projects'/>">My Projects</a></li>
-			<li><a href=" <c:url value='/contact'/>">Contact</a></li>
-		</ul>
-	</nav>
-	
-	<!--  Takes up the space of the fixed navbar -->
-	<div style="margin-top: 70px;"></div>
-	
+	<jsp:include page="nav.jsp" />
+		
 	<!-- Contact Details  -->
 	<div style="margin-top: 100px;">
 		<h2 style="font-size: 70px; color: white; text-align:center">CONTACT US</h2>

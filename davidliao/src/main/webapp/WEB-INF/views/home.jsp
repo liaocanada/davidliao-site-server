@@ -2,16 +2,12 @@
 <%@ page isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec"	uri="http://www.springframework.org/security/tags"%>
+<!DOCTYPE html>
 
-<html lang="en">
+<html>
 <head>
 	<title>Home</title>
-	<link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet" />
-	<link href="<c:url value='/static/css/app.css' />" rel="stylesheet" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<jsp:include page="resources.jsp" />
 
 	<style>
 	th, td {
@@ -21,22 +17,8 @@
 </head>
 
 <body>
-	<%-- <jsp:include page="x.jsp"/> --%>
-	<!-- Navigation Bar -->
-	<nav class="navbar" style="padding:5px 8%;">
-		<ul class="nav navbar-nav">
-			<li><a href="<c:url value='/home'/>">Home</a></li>
-		</ul>
-		<ul class="nav navbar-nav navbar-right">
-			<li><a href=" <c:url value='/achievements'/>">My Achievements</a></li>
-			<li><a href=" <c:url value='/projects'/>">My Projects</a></li>
-			<li><a href=" <c:url value='/contact'/>">Contact</a></li>
-		</ul>
-	</nav>
+	<jsp:include page="nav.jsp"/>
 	
-	<!--  Takes up the space of the fixed navbar -->
-	<div style="margin-top: 60px;"></div>
-
 	<!-- Top introduction -->
 	<div class="row" style="margin: 0 60px;">
 		<!-- Image -->
@@ -67,6 +49,17 @@
 			<h3>MY ACHIEVEMENTS</h3>
 			<table class="table"
 				style="font-size: small; margin-bottom: 0px; color: white;">
+				<tr>
+					<td>
+						<h4 style="margin-top: 0px;">Current University Offers</h4>					
+						<ul>
+							<li>University of Toronto (St. George campus) - Bachelor of Computer Science</li>
+							<li>University of Toronto (Missisauga campus) - Bachelor of Computer Science + Mathematics and Statistics</li>
+							<li>Carleton University - Bachelor of Computer Science</li>
+							<li>University of Ottawa - Bachelor of Software Engineering</li>
+						</ul>
+					</td>
+				</tr>
 				<tr>
 					<td>
 						<h4 style="margin-top: 0px;">Java programming &amp; Java EE
@@ -116,17 +109,6 @@
 							<li>Grade 10 - Outstanding Achievement in Guitar</li>
 						</ul>
 
-					</td>
-				</tr>
-				<tr>
-					<td>
-						<h4 style="margin-top: 0px;">Current University Offers</h4>					
-						<ul>
-							<li>University of Toronto (St. George campus) - Bachelor of Computer Science</li>
-							<li>University of Toronto (Missisauga campus) - Bachelor of Computer Science + Mathematics and Statistics</li>
-							<li>Carleton University - Bachelor of Computer Science</li>
-							<li>University of Ottawa - Bachelor of Software Engineering</li>
-						</ul>
 					</td>
 				</tr>
 			</table>
