@@ -51,12 +51,13 @@
 				style="font-size: small; margin-bottom: 0px; color: white;">
 				<tr>
 					<td>
-						<h4 style="margin-top: 0px;">Current University Offers</h4> <h4 style="color:red;">(All early acceptance)</h4>					
+						<h4 style="margin-top: 0px;">Certifications and Education</h4>					
 						<ul>
-							<li>University of Toronto (St. George campus) - Bachelor of Computer Science (Feb 14, 2018)</li>
-							<li>University of Toronto (Missisauga campus) - Bachelor of Computer Science, Mathematics and Statistics (Feb 14, 2018)</li>
-							<li>Carleton University - Bachelor of Computer Science (Dec 11, 2017)</li>
-							<li>University of Ottawa - Bachelor of Software Engineering (Dec 7, 2017)</li>
+							<li>Oracle Certified Professional Java SE 8 Programmer (2019)</li>
+							<li>Oracle Certified Associate Java SE 8 Programmer (2017)</li>
+							<li>Carleton University, Bachelor of Computer Science (Honours)
+								<ul><li>A+ GPA - Fall 2018</li></ul>
+							</li>
 						</ul>
 					</td>
 				</tr>
@@ -65,7 +66,6 @@
 						<h4 style="margin-top: 0px;">Java programming &amp; Java EE
 							web development</h4>
 						<ul>
-							<li>Passed the Oracle Java certification exam with 84%</li>
 							<li>Worked as a Java Developer (co-op) at inBay Technologies
 								(<a href="https://www.inbaytech.com/" class="link-yellow">www.inbaytech.com</a>)
 								to develop a Java EE Human Resources Management System web
