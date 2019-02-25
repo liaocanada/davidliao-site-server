@@ -11,7 +11,7 @@
 </head>
 	
 <body>
-	<jsp:include page="nav.jsp" />
+	<jsp:include page="header.jsp" />
 
 	<div class="video-wrapper" align="center" style="padding-top: 10px">
 		<iframe width="1000" height="550" src="https://www.youtube.com/embed/Akjvt6dXj7s?rel=0" 

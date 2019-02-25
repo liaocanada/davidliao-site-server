@@ -11,7 +11,7 @@
 </head>
 
 <body>
-	<jsp:include page="nav.jsp" />
+	<jsp:include page="header.jsp" />
 
 	<div align="center" style="height: 90%">
 		<iframe style="display: block; height: 100%;" width="840px"

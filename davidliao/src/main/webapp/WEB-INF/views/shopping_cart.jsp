@@ -11,7 +11,7 @@
 </head>
 	
 <body>
-	<jsp:include page="nav.jsp" />
+	<jsp:include page="header.jsp" />
 		
 	<div style="margin: 30px auto;" align="center">
 	<!-- 	<p style="font-size: 27px; color: #6ea6ca; margin: 0;">David's Swim Gallery (Powered by Shopify)</p> -->

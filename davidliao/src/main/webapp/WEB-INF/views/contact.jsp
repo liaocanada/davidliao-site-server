@@ -11,7 +11,7 @@
 </head>
 
 <body style="background-color: #1F3D60;">
-	<jsp:include page="nav.jsp" />
+	<jsp:include page="header.jsp" />
 		
 	<!-- Contact Details  -->
 	<div style="margin-top: 100px;">

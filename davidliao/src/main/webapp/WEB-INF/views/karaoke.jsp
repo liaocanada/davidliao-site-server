@@ -12,7 +12,7 @@
 </head>
 
 <body>
-	<jsp:include page="nav.jsp" />
+	<jsp:include page="header.jsp" />
 	
 	<div class="video-wrapper" align="center" style="padding-top: 10px">
 		<iframe width="1000" height="550" src="https://www.youtube.com/embed/DeEAKgeGLb4?rel=0" 
