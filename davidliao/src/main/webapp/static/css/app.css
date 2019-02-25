@@ -10,18 +10,36 @@ body{
 	overflow-x: hidden;
 }
 
-#home-side-spacer {
-	width: 11.25%;
+.inner-col {
+	position: relative;
+	height: 100%;
 }
 
-#home-center-spacer {
-	width: 7.5%;
+#home-textbox-container {
+	padding: 3% 12.5%;
 }
 
 #home-textbox {
-	width: 35%; 
 	background-color: #1F3D60; 
 	padding: 0px 40px;
+	font-size: small; 
+	margin-bottom: 0px; 
+	color: white;
+}
+
+#home-textbox > table > tbody > tr > th {
+	vertical-align: top;
+	text-align: center;
+}
+
+#home-textbox > .table {
+	height: 100%;
+	margin-bottom: 5px;
+}
+
+#button-cell {
+	vertical-align: bottom;
+	text-align: center;
 }
 
 #banner {
@@ -59,8 +77,12 @@ body{
 	color: #f2f2f2;
 	margin: auto;
 	width: 45%;
-	text-align: center;
 	position: relative;
+}
+
+#banner-cover-contents > .btn-block {
+	max-width: 316px;
+	margin: 0 auto;
 }
 
 div #banner-image {
@@ -91,13 +113,33 @@ div #banner-image {
   padding: 16px;
 }
 
-.link-yellow {
+a.link-yellow {
 	color: rgb(238, 225, 132) !important;
 	text-decoration:  underline !important;
 }
 
+.subheader {
+	margin-top: 0;
+}
+
 #btn-home {
 	margin: 2% 0 5%;
+}
+
+@media(min-width: 768px) {
+	.row-eq-height {
+	  display: -webkit-box;
+	  display: -webkit-flex;
+	  display: -ms-flexbox;
+	  display: flex;
+	}
+	
+	#home-textbox:nth-child(1) {
+		margin-right: 5%;
+	}
+	#home-textbox:nth-child(2) {
+		margin-left: 5%;
+	}
 }
 
 /*.btn-home {
@@ -225,6 +267,12 @@ background-image: linear-gradient(to top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, 
   padding: 14px 16px;
   text-decoration: none;
   font-size: 14px;
+}
+
+#footer {
+	padding: 10px 0; 
+	background-color: #1F3D60;
+	color: white;
 }
 
 .navbar-default .navbar-nav > .dropdown > a:hover .caret,

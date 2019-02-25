@@ -10,12 +10,6 @@
 
 	<title>Home</title>
 	<jsp:include page="resources.jsp" />
-
-	<style>
-	th, td {
-    padding: 10px 60px;
-    }
-	</style>
 </head>
 
 <body>
@@ -26,83 +20,72 @@
 		<img id="banner-image" src="<c:url value='/static/images/home.jpg' />" alt="HomePagePicture"/>
 		<div id="banner-cover">
 			<div id="banner-cover-contents">
-				<div id="banner-top-">
-					<h1>DAVID LIAO</h1>
-					<h4>Web Developer</h4>
-					<a class="btn btn-primary btn-block" href='<c:url value="/resume" />' role="button"> 
-						View Resume
-					</a>
-				</div>
+				<h1>DAVID LIAO</h1>
+				<h4>Web Developer</h4>
+				<a class="btn btn-primary btn-block" href='<c:url value="/resume" />' role="button"> 
+					View Resume
+				</a>
 			</div>
 		</div>
 	</div>
 
-	<!-- Side-by-side boxes -->
-	<div class="col-container">
-		<!-- Left Spacer -->
-		<div  id="home-side-spacer" class="col col-sm-1"></div>
+	<div id="home-textbox-container" class="row row-eq-height">
+	
+		<div id="home-textbox" class="col-sm-6">
+			<table class="table">
+				<tr><th><h3>ACHIEVEMENTS</h3></th></tr>
+				<tr><td>
+					<h4 class="subheader">Certifications</h4>
+					<ul>
+						<li><b>OCP</b> - Oracle Certified Professional Java SE 8 Programmer (2019)</li>
+						<li>OCA - Oracle Certified Associate Java SE 8 Programmer (2017)</li>
 
-		<!-- Text Box 1 -->
-		<div id="home-textbox" align="center" class="bg-primary col col-sm-6 text-white">
-			<h3>ACHIEVEMENTS</h3>
-			<table class="table"
-				style="font-size: small; margin-bottom: 0px; color: white;">
-				<tr>
-					<td>
-						<h4 style="margin-top: 0px;">Certifications and Education</h4>					
-						<ul>
-							<li>OCP - Oracle Certified Professional Java SE 8 Programmer (2019)</li>
-							<li>OCA - Oracle Certified Associate Java SE 8 Programmer (2017)</li>
-							<li>Carleton University, Bachelor of Computer Science
-								<ul><li>A+ in all courses - Fall 2018 Term</li></ul>
-							</li>
-						</ul>
-					</td>
-				</tr>
-				<tr>
-					<td valign="bottom">
-						<div style="text-align: center;">
-							<a id="btn-home" class="btn btn-primary btn-block" 
-								href='<c:url value="/achievements" />' role="button"> More
-							</a>
-						</div>
-					</td>
-				</tr>
+					</ul>
+					<h4 class="subheader">Education</h4>
+					<ul>
+						<li>Carleton University, Bachelor of Computer Science
+							<ul><li>A+ in all courses - Fall 2018 Term</li></ul>
+						</li>
+					</ul>
+				</td></tr>
+				<tr><td id="button-cell">
+					<a id="btn-home" class="btn btn-primary btn-block" 
+						href='<c:url value="/achievements" />' role="button"> More Info
+					</a>
+				</td></tr>
 			</table>
 		</div>
-
-		<!-- Center Spacer -->
-		<div id="home-center-spacer" class="col col-sm-1"></div>
-
-		<!-- Text Box 2 -->
-		<div id="home-textbox" class="bg-primary col col-sm-6 text-white">
-			<h3 align="center">PROJECTS</h3>
-
-			<table class="table" style="font-size: small; margin-bottom: 0px; color: white;">
-				<tr>
-					<td>
-						<h4 style="margin-top: 0px;">User Management System</h4>
-						<ul>
-							<li>Developed the presentation layer using JSP, JavaScript,
-								CSS, HTML, Bootstrap and jQuery
-							<li>Designed and developed web applications with Spring MVC,
-								Spring Security frameworks for easy maintainability, JPA and
-						</ul> 
-				</tr>
-				<tr>
-					<td valign="bottom">
-						<div style="text-align: center;">
-							<a id="btn-home" class="btn btn-primary btn-block" 
-							href='<c:url value="/achievements" />' role="button"> More
-							</a>
-						</div>
-					</td>
-				</tr>
+		<div id="home-textbox" class="col-sm-6">
+			<table class="table">
+				<tr><th><h3>PROJECTS</h3></th></tr>
+				<tr><td>
+					<h4 class="subheader">Java Spring Web Apps</h4>
+					<ul>
+						<li>Personal Website (this site!)</li>
+						<li>Human Resources Management System - made for 
+							<a class="link-yellow" href="https://www.inbaytech.com/">inBay Technologies</a>
+						</li>
+					</ul>
+					
+					<h4 class="subheader">JavaScript React Web Apps</h4>
+					<ul>
+						<li>Featured Listings App - made for 
+							<a class="link-yellow" href="https://www.gradea.ca/">Grade A</a>
+						</li>
+						<li>CareerCounsel - a single-page application that generates 
+							statistics based on real-time job listings
+						</li>
+					</ul>
+				</td></tr>
+				<tr><td id="button-cell">
+					<a id="btn-home" class="btn btn-primary btn-block" 
+						href='<c:url value="/projects" />' role="button"> More Info
+					</a>
+				</td></tr>
 			</table>
-
-
-		</div>
-	</div>
+		</div> <!-- /#home-textbox -->
+	
+	</div> <!-- /#home-textbox-container -->
 
 <jsp:include page="footer.jsp" />
 
