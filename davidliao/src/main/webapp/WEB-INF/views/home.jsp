@@ -6,10 +6,8 @@
 
 <html>
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-	<title>Home</title>
 	<jsp:include page="resources.jsp" />
+	<title>Home</title>
 </head>
 
 <body>
@@ -29,8 +27,10 @@
 		</div>
 	</div>
 
+	<!-- Text boxes -->
 	<div id="home-textbox-container" class="row row-eq-height">
 	
+		<!-- Achievements box -->
 		<div id="home-textbox" class="col-sm-6">
 			<table class="table">
 				<tr><th><h3>ACHIEVEMENTS</h3></th></tr>
@@ -55,6 +55,8 @@
 				</td></tr>
 			</table>
 		</div>
+		
+		<!-- Projects box -->
 		<div id="home-textbox" class="col-sm-6">
 			<table class="table">
 				<tr><th><h3>PROJECTS</h3></th></tr>

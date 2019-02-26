@@ -10,6 +10,14 @@ body{
 	overflow-x: hidden;
 }
 
+.layout {
+	padding: 5px 10%;
+}
+
+.thumbnail {
+	padding: 0 5px;
+}
+
 .inner-col {
 	position: relative;
 	height: 100%;
