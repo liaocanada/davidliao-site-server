@@ -10,7 +10,7 @@ import com.tenjava.springmvc.entity.Skills;
 
 import static com.tenjava.springmvc.entity.Skills.*;
 
-/* */
+// @Repository
 public class ProjectDao {
 	
 	private List<Project> projects;
@@ -21,31 +21,31 @@ public class ProjectDao {
 		projects = Arrays.asList(
 			new Project("Human Resources Management System", 
 					"Some placeholder description", 
-					"url", 
+					"hrms.jpg", 
 					Status.COMPLETED,
 					new TreeSet<Skills>(Arrays.asList(JAVA_8, JSP, HTML5, CSS, BOOTSTRAP, TOMCAT, MYSQL))),
 				
 			new Project("Company Website", 
 					"Some placeholder description", 
-					"url", 
+					"placeholder.jpg", 
 					Status.COMPLETED,
 					new TreeSet<Skills>(Arrays.asList(JAVA_8, JSP, GOOGLE_CLOUD_PLATFORM, HTML5, CSS, BOOTSTRAP, TOMCAT))),
 			
 			new Project("Featured Listings", 
 					"Some placeholder description", 
-					"url", 
+					"featured.jpg", 
 					Status.COMPLETED,
 					new TreeSet<Skills>(Arrays.asList(JAVASCRIPT, REACT, METEOR, REACT_SEMANTIC_UI, CSS, MONGODB))),
 			
 			new Project("CareerCounsel", 
 					"Some placeholder description", 
-					"url", 
+					"careercounsel.jpg", 
 					Status.WORK_IN_PROGRESS,
 					new TreeSet<Skills>(Arrays.asList(JAVASCRIPT, REACT, NODE, REACT_SEMANTIC_UI, CSS))),
 			
 			new Project("Personal Website", 
 					"Some placeholder description", 
-					"url", 
+					"davidliao.jpg", 
 					Status.WORK_IN_PROGRESS,
 					new TreeSet<Skills>(Arrays.asList(JAVA_8, JSP, GOOGLE_CLOUD_PLATFORM, HTML5, CSS, BOOTSTRAP, TOMCAT)))
 			

@@ -3,8 +3,12 @@ package com.tenjava.springmvc.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.tenjava.springmvc.entity.Project.Status;
+import com.tenjava.springmvc.service.ProjectService;
 
 /**
  * Manages all URL requests and directs them appropriately.
@@ -13,12 +17,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/") //Handles all URLs
 public class AppController {
 	
-	/** Contains the error messages for error checking. */
+	
+	/** Gets projects */
+	ProjectService projectService;
+	
+	/** Contains custom messages */
 	MessageSource messageSource;
 	
 	/** Inject required services using Spring autowiring. */
 	@Autowired
-	public AppController(MessageSource messageSource) {
+	public AppController(ProjectService projectService, MessageSource messageSource) {
+		this.projectService = projectService;
 		this.messageSource = messageSource;
 	}
 	
@@ -36,7 +45,10 @@ public class AppController {
 	}
 	
 	@GetMapping("/projects")
-	public String projectsPage() {
+	public String projectsPage(Model model) {
+		model.addAttribute("completedProjects", projectService.getAllProjects(Status.COMPLETED));
+		model.addAttribute("wipProjects", projectService.getAllProjects(Status.WORK_IN_PROGRESS));
+		model.addAttribute("todoProjects", projectService.getAllProjects(Status.TO_DO));
 		return "projects";
 	}
 	

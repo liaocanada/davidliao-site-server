@@ -3,7 +3,9 @@ package com.tenjava.springmvc.service;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.function.UnaryOperator;
 import java.util.stream.Collectors;
 import java.util.Arrays;
 import java.util.Collection;
@@ -28,6 +30,7 @@ public class ProjectService {
 	}
 	
 	public List<Project> getAllProjects(Status status) {
+		
 		return dao.findAll().parallelStream()
 				.filter(project -> (project.getStatus() == status))
 				.collect(Collectors.toList());

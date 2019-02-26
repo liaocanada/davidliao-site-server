@@ -15,7 +15,24 @@ body{
 }
 
 .thumbnail {
-	padding: 0 5px;
+	background-color: #FEFFF1;
+	margin: 0 5px;
+	padding: 0;
+	border-radius: 0;
+	border: 2px solid #CECECE;
+}
+
+.thumbnail-wrapper {
+	box-sizing: content-box;
+	padding: 0;
+}
+
+.thumbnail > .caption {
+	background-color: white;
+}
+
+.thumbnail > img {
+	border-bottom: 1px solid #E2E2E2;
 }
 
 .inner-col {
@@ -167,16 +184,10 @@ a.link-yellow {
 	display: none; 
 }
 
-.thumbnail {
-    border: 0 none;
-    box-shadow: none;
-}
-
 .custom-text {
 	font-size: 16px; 
 	color: #39729b;
 }
-
 
 .field {
 	margin: 1px 15%;
@@ -275,6 +286,15 @@ background-image: linear-gradient(to top, #EDEDED 0%, #EAEAEA 8%, #2F2F2F 100%, 
   padding: 14px 16px;
   text-decoration: none;
   font-size: 14px;
+}
+
+span#skill-tag {
+	margin: 0 2px;
+}
+
+#projects-row {
+	color: #FEFFF1;
+	margin-bottom: 16px;
 }
 
 #footer {

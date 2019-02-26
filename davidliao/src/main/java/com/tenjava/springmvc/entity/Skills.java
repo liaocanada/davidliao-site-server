@@ -32,14 +32,38 @@ public enum Skills {
 	MONGODB("MongoDB", "green", "database");
 	
 	
-	
-	private final String fullName, colour;
+	private final String fullName, colour, bsTagClass;
 	private final String[] types;
 	
 	private Skills(String fullName, String colour, String... types) {
 		this.fullName = fullName;
 		this.colour = colour;
 		this.types = types;
+		
+		// TODO change so that it affects element style instead of class
+		switch(colour) {
+		case "blue":
+			this.bsTagClass = "label-primary";
+			break;
+		case "grey":
+			this.bsTagClass = "label-secondary";
+			break;
+		case "green":
+			this.bsTagClass = "label-success";
+			break;
+		case "red":
+			this.bsTagClass = "label-danger";
+			break;
+		case "yellow":
+		case "orange":
+			this.bsTagClass = "label-warning";
+			break;
+		case "light blue":
+			this.bsTagClass = "label-info";
+			break;
+		default:
+			this.bsTagClass = "label-secondary";
+		}
 	}
 	
 	public String getFullName() {
@@ -54,4 +78,8 @@ public enum Skills {
 	public String[] getTypes() {
 		return types;
 	}
+	public String getBsTagClass() {
+		return bsTagClass;
+	}
+	
 }
