@@ -19,11 +19,11 @@ public class ProjectDao {
 	public ProjectDao() {
 		
 		projects = Arrays.asList(
-			new Project("Human Resources Management System", 
-					"Some placeholder description", 
-					"hrms.jpg", 
+			new Project("Featured Listings", 
+					"A scalable multi-page web app that allows specific types of business owners to ", 
+					"featured.jpg",
 					Status.COMPLETED,
-					new TreeSet<Skills>(Arrays.asList(JAVA_8, JSP, HTML5, CSS, BOOTSTRAP, TOMCAT, MYSQL))),
+					new TreeSet<Skills>(Arrays.asList(JAVASCRIPT, REACT, METEOR, REACT_SEMANTIC_UI, CSS, MONGODB))),
 				
 			new Project("Company Website", 
 					"Some placeholder description", 
@@ -31,11 +31,11 @@ public class ProjectDao {
 					Status.COMPLETED,
 					new TreeSet<Skills>(Arrays.asList(JAVA_8, JSP, GOOGLE_CLOUD_PLATFORM, HTML5, CSS, BOOTSTRAP, TOMCAT))),
 			
-			new Project("Featured Listings", 
+			new Project("Human Resources Management System", 
 					"Some placeholder description", 
-					"featured.jpg", 
+					"hrms.jpg", 
 					Status.COMPLETED,
-					new TreeSet<Skills>(Arrays.asList(JAVASCRIPT, REACT, METEOR, REACT_SEMANTIC_UI, CSS, MONGODB))),
+					new TreeSet<Skills>(Arrays.asList(JAVA_8, JSP, HTML5, CSS, BOOTSTRAP, TOMCAT, MYSQL))),
 			
 			new Project("CareerCounsel", 
 					"Some placeholder description", 

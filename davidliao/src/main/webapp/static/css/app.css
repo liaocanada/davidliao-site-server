@@ -25,6 +25,7 @@ body{
 .thumbnail-wrapper {
 	box-sizing: content-box;
 	padding: 0;
+	margin-bottom: inherit;
 }
 
 .thumbnail > .caption {
@@ -113,6 +114,10 @@ body{
 div #banner-image {
 	min-width: 100%;
 	overflow: hidden
+}
+
+.media-left {
+	width: 15%;
 }
 
 .videoWrapper {
