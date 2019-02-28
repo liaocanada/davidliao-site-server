@@ -67,6 +67,21 @@ html, body {
 	text-align: center;
 }
 
+.h-center-children {
+	text-align: center;
+}
+
+.media-image {
+	width: 100%;
+	max-width: 240px;
+	border: 1.7px solid #021a40;
+	margin: 14px 0;
+}
+
+.media-row {
+	margin-bottom: 16px;
+}
+
 #banner {
 	width: 100%;
 	position: relative;
@@ -113,10 +128,6 @@ html, body {
 div #banner-image {
 	min-width: 100%;
 	overflow: hidden
-}
-
-.media-left {
-	width: 15%;
 }
 
 .videoWrapper {

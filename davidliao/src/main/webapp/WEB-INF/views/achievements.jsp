@@ -20,26 +20,16 @@
 				Achievements <small>Awards, certifications, and education</small>
 			</h1>
 		</div>
-		
-		<div class="alert alert-warning alert-dismissible" role="alert">
-			<button type="button" class="close" data-dismiss="alert"
-				aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
-			Note: this website isn't optimized for mobile, yet. Hold on tight while construction completes...
-		</div>
-
 
 		<h3>Certifications</h3>
-		<div class="media">
-			<div class="media-left">
-				<img class="media-object" 
-					src="<c:url value="/static/images/achievements/OCP.bmp" />" 
+		<div class="row media-row">
+			<div class="col-sm-3 h-center-children">
+				<img class="media-image" src="<c:url value="/static/images/achievements/OCP.bmp" />" 
 					alt="OCP Logo" 
 				/>
 			</div>
-			<div class="media-body">
-				<h4 class="media-heading">OCP - Oracle Certified Professional</h4>
+			<div class="col-sm-9">
+				<h4>OCP - Oracle Certified Professional</h4>
 				Includes topics such as:
 				<ul>
 					<li>Lambdas</li>
@@ -59,15 +49,16 @@
 			</div>
 		</div>
 		
-		<div class="media">
-			<div class="media-left">
-				<img class="media-object" 
+		
+		<div class="row media-row">
+			<div class="col-sm-3 h-center-children">
+				<img class="media-image" 
 					src="<c:url value="/static/images/achievements/OCA.bmp" />" 
 					alt="OCA Logo" 
 				/>
 			</div>
-			<div class="media-body">
-				<h4 class="media-heading">OCA - Oracle Certified Associate</h4>
+			<div class="col-sm-9">
+				<h4>OCA - Oracle Certified Associate</h4>
 				Includes topics such as:
 				<ul>
 					<li>Data Types</li>
@@ -85,15 +76,15 @@
 		</div>
 
 		<h3>Education</h3>
-		<div class="media">
-			<div class="media-left media-middle">
-				<img class="media-object" 
+		<div class="row media-row">
+			<div class="col-sm-3 h-center-children">
+				<img class="media-image" 
 					src="<c:url value="/static/images/achievements/carleton.jpg" />" 
 					alt="Carleton Picture" 
 				/>
 			</div>
-			<div class="media-body">
-				<h4 class="media-heading">Bachelor's degree in Computer Science, Carleton University</h4>
+			<div class="col-sm-9">
+				<h4>Bachelor's degree in Computer Science, Carleton University</h4>
 				<ul>
 					<li>Fall 2018: A+ in all courses</li>
 					<li>Specialization in Mobile Applications Development</li>
