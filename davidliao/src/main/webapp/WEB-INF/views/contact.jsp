@@ -26,8 +26,8 @@
 				aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 			</button>
-			Hi! You are in the right place, as I am currently looking for a job for this summer! 
-			Please send me an email or a text and I'll be in touch shortly.
+			I'm currently seeking a job for this summer, so you are in the right place! 
+			Please send me an email or a text and we'll be in touch shortly.
 		</div>
 
 		<div class="well">
@@ -39,11 +39,11 @@
 			
 			<h3>LinkedIn</h3>
 			<i class="fab fa-linkedin"></i>
-			<a href="https://linkedin.com/in/david-liao/">https://linkedin.com/in/david-liao/</a>
+			<a class="link-dark-yellow" href="https://linkedin.com/in/david-liao/">https://linkedin.com/in/david-liao/</a>
 
 			<h3>GitHub</h3>
 			<i class="fab fa-github-square"></i>
-			<a href="https://github.com/liaocanada">https://github.com/liaocanada</a>
+			<a class="link-dark-yellow" href="https://github.com/liaocanada">https://github.com/liaocanada</a>
 		</div>
 
 	</div>
