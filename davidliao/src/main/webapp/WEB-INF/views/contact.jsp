@@ -21,10 +21,21 @@
 			</h1>
 		</div>
 
+		<div class="alert alert-success alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert"
+				aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			Hi! You are in the right place, as I am currently looking for a job for this summer! 
+			Please send me an email or a text and I'll be in touch shortly.
+		</div>
+
 		<div class="well">
+			
+			
 			<h3>Contact info</h3>
 			<p><i class="fas fa-at"></i> contact@davidliao.ca or liao.canada@gmail.com
-			<p><i class="fas fa-mobile-alt"></i> Send a text to (613) 600-8621
+			<p><i class="fas fa-mobile-alt"></i> (613) 600-8621
 			
 			<h3>LinkedIn</h3>
 			<i class="fab fa-linkedin"></i>

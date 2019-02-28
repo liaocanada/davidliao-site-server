@@ -7,7 +7,7 @@
 
 <head>
 <jsp:include page="resources.jsp" />
-<title>My Projects</title>
+<title>My Achievements</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
 				aria-label="Close">
 				<span aria-hidden="true">&times;</span>
 			</button>
-			Note: this website isn't optimized for mobile... yet.
+			Note: this website isn't optimized for mobile, yet. Hold on tight while construction completes...
 		</div>
 
 
@@ -42,19 +42,20 @@
 				<h4 class="media-heading">OCP - Oracle Certified Professional</h4>
 				Includes topics such as:
 				<ul>
-					<li>Advanced Java Class Design
-						<ul>
-							<li>Class structures: singletons, factories, immutability, etc.</li>
-							<li>Nested classes, inner classes, local classes</li>
-							<li>Enums</li>
-						</ul>
-					</li>
-					<li>And more... For details see 
-						<a href="https://education.oracle.com/java-se-8-programmer-ii/pexam_1Z0-809#heading2">
-							here
-						</a>
-					</li>
+					<li>Lambdas</li>
+					<li>Stream API</li>
+					<li>Advanced Java Class Design</li>
+					<li>Collections and Generics</li>
+					<li>Java Database Connectivity (JDBC)</li>
+					<li>IO, NIO.2, and Serialization</li>		
 				</ul>
+				<p>
+					And more... for details see 
+					<a class="link-dark-yellow" href="https://education.oracle.com/java-se-8-programmer-ii/pexam_1Z0-809#heading2">
+						here
+					</a>
+					("review exam topics" dropdown)
+				</p>
 			</div>
 		</div>
 		
@@ -69,17 +70,17 @@
 				<h4 class="media-heading">OCA - Oracle Certified Associate</h4>
 				Includes topics such as:
 				<ul>
-					<li>Java Basics</li>
 					<li>Data Types</li>
 					<li>Object-Oriented Programming Principles</li>
 					<li>Strings</li>
 					<li>Handling exceptions</li>
-					<li>And more... For details see 
-						<a href="https://education.oracle.com/java-se-8-programmer-i/pexam_1Z0-808#heading2">
-							here
-						</a>
-					</li>
 				</ul>
+				<p>And more... for details see 
+					<a class="link-dark-yellow" href="https://education.oracle.com/java-se-8-programmer-i/pexam_1Z0-808#heading2">
+						here
+					</a>
+					("review exam topics" dropdown)
+				</p>
 			</div>
 		</div>
 
