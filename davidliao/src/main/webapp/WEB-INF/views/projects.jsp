@@ -41,7 +41,6 @@
 								</a>
 							</c:forEach>
 						</p>
-						<!-- <p><a href="#" class="btn btn-primary" role="button">Button</a></p>  -->
 					</div>
 				</div>				
 				</div>
@@ -66,11 +65,26 @@
 								</a>
 							</c:forEach>
 						</p>
-						<!-- <p><a href="#" class="btn btn-primary" role="button">Button</a></p>  -->
 					</div>
 					</div>
 				</div>
 			</c:forEach>
+		</div>
+		
+		<div class="page-header">
+			<h3>Software of interest</h3>
+			<p class="subtext">Some technologies that I am currently learning, or wanting to explore:</p>
+		</div>
+		<div class="well">
+			<ul>
+				<li><b>Android Development</b>: pursing an Android Associate Developer certification</li>
+				<li><b>Amazon Web Services</b>: exploring EC2, Elastic Beanstalk, and Cloud Services</li>
+				<li>Spring Boot</li>
+				<li>Hibernate</li>
+				<li>Thymeleaf</li>
+				<li>Angular/TypeScript</li>
+				<li>Objective-C/Swift</li>
+			</ul>
 		</div>
 		
 	</div>
