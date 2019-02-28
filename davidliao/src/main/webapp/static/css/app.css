@@ -144,8 +144,19 @@ div #banner-image {
 }
 
 a.link-yellow {
-	color: rgb(238, 225, 132) !important;
-	text-decoration:  underline !important;
+	color: rgb(238, 225, 132);
+}
+
+a.link-yellow:hover {
+	color: rgb(254, 225, 106);
+}
+
+a.link-dark-yellow {
+	color: #FEC200;
+}
+
+a.link-dark-yellow:hover {
+	color: #CB9B00;
 }
 
 .subheader {

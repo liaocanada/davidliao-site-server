@@ -32,7 +32,7 @@
 					<img src="<c:url value="/static/images/projects/${ project.imageUrl }"/>" alt="Project Image">
 					<div class="caption">
 						<h3><c:out value="${ project.title }" /></h3>
-						<p><c:out value="${ project.description }" /></p>
+						<p><c:out value="${ project.description }" escapeXml="false" /></p>
 						<p>
 							<c:forEach var="skill" items="${ project.skills }">	
 								<a href="#">
@@ -57,12 +57,14 @@
 					<img src="<c:url value="/static/images/projects/${ project.imageUrl }"/>" alt="Project Image">
 					<div class="caption">
 						<h3><c:out value="${ project.title }" /></h3>
-						<p><c:out value="${ project.description }" /></p>
+						<p><c:out value="${ project.description }" escapeXml="false" /></p>
 						<p>
-							<c:forEach var="skill" items="${ project.skills }">								
-								<span id="skill-tag" class="label ${ skill.bsTagClass }">
-									<c:out value="${ skill.fullName }" />
-								</span>
+							<c:forEach var="skill" items="${ project.skills }">		
+								<a href="#">
+									<span id="skill-tag" class="label ${ skill.bsTagClass }">
+										<c:out value="${ skill.fullName }" />
+									</span>
+								</a>
 							</c:forEach>
 						</p>
 						<!-- <p><a href="#" class="btn btn-primary" role="button">Button</a></p>  -->
