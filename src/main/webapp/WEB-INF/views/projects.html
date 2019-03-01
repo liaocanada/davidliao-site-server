@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:include="fragments/resources :: resources">
+	<title>My Projects</title>
+</head>
+
+<body>
+	<div th:replace="fragments/header :: navbar"></div>
+
+	<div class="layout">
+
+		<div class="page-header">
+			<h1>
+				Projects <small>A listing of my completed and WIP projects</small>
+			</h1>
+		</div>
+
+
+		<h3>Completed Projects</h3>
+		<div id="projects-row" class="row">
+			<th:block th:each="project: ${ completedProjects }">
+				<div class="col-md-4 thumbnail-wrapper">
+
+					<div class="thumbnail">
+						<img th:src="@{ ${'/static/images/projects/' + project.imageUrl }}" alt="Project Image">
+						<div class="caption">
+							<h3 th:text="${ project.title }">Project title goes here</h3>
+							<p th:utext="${ project.description }">Project description goes here</p>
+							<p>
+								<th:block th:each="skill: ${ project.skills }">
+									<a href="#">
+										<span id="skill-tag" 
+											class="label"
+											th:classappend="${ skill.bsTagClass }"
+											th:text="${ skill.fullName }">
+										</span>
+									</a>
+								</th:block>
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</th:block>
+		</div>
+
+		<h3>Work-In-Progress Projects</h3>
+		<div id="projects-row" class="row">
+			<th:block th:each="project: ${ wipProjects }">
+				<div class="col-md-4 thumbnail-wrapper">
+
+					<div class="thumbnail">
+						<img th:src="@{ ${'/static/images/projects/' + project.imageUrl }}" alt="Project Image">
+						<div class="caption">
+							<h3 th:text="${ project.title }">Project title goes here</h3>
+							<p th:utext="${ project.description }">Project description goes here</p>
+							<p>
+								<th:block th:each="skill: ${ project.skills }">
+									<a href="#">
+										<span id="skill-tag" 
+											class="label"
+											th:classappend="${ skill.bsTagClass }"
+											th:text="${ skill.fullName }">
+										</span>
+									</a>
+								</th:block>
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</th:block>
+		</div>
+		
+		<div class="page-header">
+			<h3>Software of interest</h3>
+			<p class="subtext">Some technologies that I am currently learning, or wanting to explore:</p>
+		</div>
+		<div class="well">
+			<ul>
+				<li><b>Android Development</b>: pursing an Android Associate Developer certification</li>
+				<li><b>Amazon Web Services</b>: exploring EC2, Elastic Beanstalk, and Cloud Services</li>
+				<li>Spring Boot</li>
+				<li>Hibernate</li>
+				<li>Thymeleaf</li>
+				<li>Angular/TypeScript</li>
+				<li>Objective-C/Swift</li>
+			</ul>
+		</div>
+		
+	</div>
+				
+	<div th:replace="fragments/footer :: copyright"></div>
+
+</body>
+</html>

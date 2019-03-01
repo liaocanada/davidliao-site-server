@@ -1,17 +1,12 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 
-<head>
-<jsp:include page="resources.jsp" />
-<title>My Achievements</title>
+<head th:include="fragments/resources :: resources">
+	<title>My Achievements</title>
 </head>
 
 <body>
-	<jsp:include page="header.jsp" />
+	<div th:replace="fragments/header :: navbar"></div>
 
 	<div class="layout">
 
@@ -24,8 +19,8 @@
 		<h3>Certifications</h3>
 		<div class="row media-row">
 			<div class="col-sm-3 h-center-children">
-				<img class="media-image" src="<c:url value="/static/images/achievements/OCP.bmp" />" 
-					alt="OCP Logo" 
+				<img class="media-image" 
+					th:src="@{/static/images/achievements/OCP.bmp}" alt="OCP Logo" 
 				/>
 			</div>
 			<div class="col-sm-9">
@@ -41,7 +36,8 @@
 				</ul>
 				<p>
 					And more... for details see 
-					<a class="link-dark-yellow" href="https://education.oracle.com/java-se-8-programmer-ii/pexam_1Z0-809#heading2">
+					<a class="link-dark-yellow" 
+						th:href="@{https://education.oracle.com/java-se-8-programmer-ii/pexam_1Z0-809#heading2}">
 						here
 					</a>
 					("review exam topics" dropdown)
@@ -53,7 +49,7 @@
 		<div class="row media-row">
 			<div class="col-sm-3 h-center-children">
 				<img class="media-image" 
-					src="<c:url value="/static/images/achievements/OCA.bmp" />" 
+					th:src="@{/static/images/achievements/OCA.bmp}" 
 					alt="OCA Logo" 
 				/>
 			</div>
@@ -67,7 +63,8 @@
 					<li>Handling exceptions</li>
 				</ul>
 				<p>And more... for details see 
-					<a class="link-dark-yellow" href="https://education.oracle.com/java-se-8-programmer-i/pexam_1Z0-808#heading2">
+					<a class="link-dark-yellow" 
+						th:href="@{https://education.oracle.com/java-se-8-programmer-i/pexam_1Z0-808#heading2}">
 						here
 					</a>
 					("review exam topics" dropdown)
@@ -79,7 +76,7 @@
 		<div class="row media-row">
 			<div class="col-sm-3 h-center-children">
 				<img class="media-image" 
-					src="<c:url value="/static/images/achievements/carleton.jpg" />" 
+					th:src="@{/static/images/achievements/carleton.jpg}" 
 					alt="Carleton Picture" 
 				/>
 			</div>
@@ -95,7 +92,7 @@
 
 	</div>
 
-	<jsp:include page="footer.jsp" />
+	<div th:replace="fragments/footer :: copyright"></div>
 
 </body>
 </html>

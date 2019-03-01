@@ -1,26 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ page isELIgnored="false" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 
-<html>
-<head>
-	<jsp:include page="resources.jsp" />
+<head th:include="fragments/resources :: resources">
 	<title>Home</title>
 </head>
 
 <body>
-	<jsp:include page="header.jsp"/>
+	<div th:replace="fragments/header :: navbar"></div>
 	
 	<!-- Banner image -->
 	<div id="banner">
-		<img id="banner-image" src="<c:url value='/static/images/home.jpg' />" alt="HomePagePicture"/>
+		<img id="banner-image" th:src="@{/static/images/home.jpg}" alt="HomePagePicture"/>
 		<div id="banner-cover">
 			<div id="banner-cover-contents">
 				<h1>DAVID LIAO</h1>
 				<h4>Web Developer</h4>
-				<a class="btn btn-primary btn-block" href='<c:url value="/resume" />' role="button"> 
+				<a class="btn btn-primary btn-block" th:href="@{/resume}" role="button"> 
 					View Resume
 				</a>
 			</div>
@@ -50,7 +45,7 @@
 				</td></tr>
 				<tr><td id="button-cell">
 					<a id="btn-home" class="btn btn-primary btn-block" 
-						href='<c:url value="/achievements" />' role="button"> More Info
+						th:href="@{/achievements}" role="button"> More Info
 					</a>
 				</td></tr>
 			</table>
@@ -81,7 +76,7 @@
 				</td></tr>
 				<tr><td id="button-cell">
 					<a id="btn-home" class="btn btn-primary btn-block" 
-						href='<c:url value="/projects" />' role="button"> More Info
+						th:href="@{/projects}" role="button"> More Info
 					</a>
 				</td></tr>
 			</table>
@@ -89,7 +84,7 @@
 	
 	</div> <!-- /#home-textbox-container -->
 
-<jsp:include page="footer.jsp" />
+	<div th:replace="fragments/footer :: copyright"></div>
 
 </body>
 </html>
