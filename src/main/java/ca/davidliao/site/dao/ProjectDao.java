@@ -1,14 +1,14 @@
-package com.tenjava.springmvc.dao;
+package ca.davidliao.site.dao;
+
+import static ca.davidliao.site.entity.Skills.*;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.TreeSet;
 
-import com.tenjava.springmvc.entity.Project;
-import com.tenjava.springmvc.entity.Project.Status;
-import com.tenjava.springmvc.entity.Skills;
-
-import static com.tenjava.springmvc.entity.Skills.*;
+import ca.davidliao.site.entity.Project;
+import ca.davidliao.site.entity.Skills;
+import ca.davidliao.site.entity.Project.Status;
 
 // @Repository
 public class ProjectDao {
@@ -27,12 +27,6 @@ public class ProjectDao {
 					Status.COMPLETED,
 					new TreeSet<Skills>(Arrays.asList(JAVASCRIPT, REACT, METEOR, REACT_SEMANTIC_UI, CSS, MONGODB))),
 				
-			new Project("Company Website", 
-					"A custom website placed on the company's intranet.", 
-					"placeholder.jpg", 
-					Status.COMPLETED,
-					new TreeSet<Skills>(Arrays.asList(JAVA_8, SPRING_MVC, JSP, GOOGLE_CLOUD_PLATFORM, HTML5, CSS, BOOTSTRAP, TOMCAT))),
-			
 			new Project("Human Resources Management System", 
 					"A system that manages employees and their personal information. Users that exist in the "
 					+ "database are able to log in. Basic CRUD functions can be performed on "
@@ -42,6 +36,12 @@ public class ProjectDao {
 					"hrms.jpg", 
 					Status.COMPLETED,
 					new TreeSet<Skills>(Arrays.asList(JAVA_8, SPRING_MVC, JSP, HTML5, CSS, BOOTSTRAP, TOMCAT, MYSQL))),
+			
+			new Project("Company Website", 
+					"A custom website placed on the company's intranet.", 
+					"placeholder.jpg", 
+					Status.COMPLETED,
+					new TreeSet<Skills>(Arrays.asList(JAVA_8, SPRING_MVC, JSP, GOOGLE_CLOUD_PLATFORM, HTML5, CSS, BOOTSTRAP, TOMCAT))),
 			
 			new Project("CareerCounsel", 
 					"A single-page web tool that generates statistics based on real-time job listings. "

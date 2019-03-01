@@ -1,4 +1,4 @@
-package com.tenjava.springmvc.configuration;
+package ca.davidliao.site.configuration;
 
 import org.springframework.context.MessageSource;
 import org.springframework.context.annotation.Bean;
@@ -13,13 +13,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-
-/**
- * Sets out the general configuration for this project.
- */
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "com.tenjava.springmvc")
+@ComponentScan(basePackages = "ca.davidliao.site")
 public class AppConfig extends WebMvcConfigurerAdapter {
 
 	@Override
@@ -49,16 +45,10 @@ public class AppConfig extends WebMvcConfigurerAdapter {
     @Bean
 	public MessageSource messageSource() {
 	    ResourceBundleMessageSource messageSource = new ResourceBundleMessageSource();
-	    //Sets messages.properties as the file to look for custom error messages
+	    //Sets messages.properties as the file containing custom messages
 	    messageSource.setBasename("messages");
 	    return messageSource;
 	}
     
-    
-    /** Workaround for a bug in Spring MVC regarding PathVariable */
-    @Override
-    public void configurePathMatch(PathMatchConfigurer matcher) {
-        matcher.setUseRegisteredSuffixPatternMatch(true);
-    }
 }
 

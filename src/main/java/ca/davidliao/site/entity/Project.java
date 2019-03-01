@@ -1,4 +1,4 @@
-package com.tenjava.springmvc.entity;
+package ca.davidliao.site.entity;
 
 import java.util.Set;
 

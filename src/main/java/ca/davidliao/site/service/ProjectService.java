@@ -1,4 +1,4 @@
-package com.tenjava.springmvc.service;
+package ca.davidliao.site.service;
 
 import org.springframework.stereotype.Service;
 
@@ -10,10 +10,10 @@ import java.util.stream.Collectors;
 import java.util.Arrays;
 import java.util.Collection;
 
-import com.tenjava.springmvc.dao.ProjectDao;
-import com.tenjava.springmvc.entity.Project;
-import com.tenjava.springmvc.entity.Project.Status;
-import com.tenjava.springmvc.entity.Skills;
+import ca.davidliao.site.dao.ProjectDao;
+import ca.davidliao.site.entity.Project;
+import ca.davidliao.site.entity.Skills;
+import ca.davidliao.site.entity.Project.Status;
 
 @Service
 public class ProjectService {
