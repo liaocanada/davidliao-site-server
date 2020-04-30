@@ -10,7 +10,10 @@
 	
 	<!-- Banner image -->
 	<div id="banner">
-		<img id="banner-image" th:src="@{/static/images/home.jpg}" alt="HomePagePicture"/>
+		<img id="banner-image" 
+			th:src="@{/static/images/home.jpg}" 
+			alt="A background photo of a building and waterfall in Carleton Place, ON"
+		/>
 		<div id="banner-cover">
 			<div id="banner-cover-contents">
 				<h1>DAVID LIAO</h1>
@@ -21,6 +24,9 @@
 				</a>
 			</div>
 		</div>
+		<div id="banner-image-description" class="bottom-right">
+			Landscape of Town Hall behind Mississippi River in Carleton Place, ON.
+		</div>
 	</div>
 
 	<!-- Text boxes -->
@@ -29,7 +35,7 @@
 		<!-- Achievements box -->
 		<div id="home-textbox" class="col-sm-6">
 			<table class="table">
-				<tr><th><h3>ACHIEVEMENTS</h3></th></tr>
+				<tr><th><h3>BACKGROUND</h3></th></tr>
 				<tr><td>
 					<h4 class="subheader">Certifications</h4>
 					<ul>
@@ -38,10 +44,20 @@
 						<li><b>OCA</b> - Oracle Certified Associate Java SE 8 Programmer (2017)</li>
 
 					</ul>
+					
+					<h4 class="subheader">Involvement</h4>
+					<ul>
+						<li>Mentor at the Science Student Success Center</li>
+						<li>Teaching Assistant</li>
+					</ul>
+					
 					<h4 class="subheader">Education</h4>
 					<ul>
 						<li>Carleton University, Bachelor of Computer Science
-							<ul><li>A+ in all 10 courses taken so far</li></ul>
+							<ul>
+								<li>11.9 GPA, 12.0 Major GPA</li>
+								<li>Computer and Internet Security Stream</li>
+							</ul>
 						</li>
 					</ul>
 				</td></tr>
@@ -58,19 +74,32 @@
 			<table class="table">
 				<tr><th><h3>PROJECTS</h3></th></tr>
 				<tr><td>
-					<h4 class="subheader">Java Spring Web Apps</h4>
+					<h4 class="subheader">Web Apps (personal)</h4>
 					<ul>
 						<li>Personal Website (this site)</li>
-						<li>Human Resources Management System</li>
+						<li>E-Bookstore</li>
+						<li>
+							CareerCounsel: Generates statistics based on 
+							real-time job listings
+						</li>
 					</ul>
 					
-					<h4 class="subheader">JavaScript React Web Apps</h4>
+					<h4 class="subheader">Web Apps (work)</h4>
 					<ul>
-						<li>CareerCounsel - a single-page application that generates 
-							statistics based on real-time job listings
-						</li>
+						<li>Human Resources Management System</li>
 						<li>Featured Listings App</li>
 					</ul>
+					
+					<h4 class="subheader">Other Projects</h4>
+					<ul>
+						<li>
+							Flamingo travel planner: Suggests an itinerary based on
+							users' budgets
+						</li>
+						<li>Various Android, iOS apps</li>
+						<li>Various Arduino projects</li>
+					</ul>
+
 				</td></tr>
 				<tr><td id="button-cell">
 					<a id="btn-home" class="btn btn-primary btn-block" 
