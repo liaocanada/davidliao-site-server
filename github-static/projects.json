@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Featured Listings App",
+        "description": "A scalable multi-page React web app that allows specific types of business owners to present their featured products to customers. Built for <a class=\"link-dark-yellow\" href=\"https://www.gradea.ca/\">Grade A Labs</a>.",
+        "image": "",
+        "type": "personal|work",
+        "url": "",
+        "skills": []
+    }
+]
