@@ -4,6 +4,7 @@
         "description": "A scalable multi-page React web app that allows specific types of business owners to present their featured products to customers. Built for <a class=\"link-dark-yellow\" href=\"https://www.gradea.ca/\">Grade A Labs</a>.",
         "image": "https://github.com/liaocanada/davidliao-site/raw/master/github-static/projects/featured.jpg",
         "type": "work",
+        "category": "web",
         "url": null,
         "skills": ["JavaScript", "React.js", "Meteor.js", "React-Semantic UI", "CSS", "MongoDB"]
     },
@@ -12,6 +13,7 @@
         "description": "A system that manages employees and their personal information. Users that exist in the database are able to log in. Basic CRUD functions can be performed on either the users themselves (non-admins) or other users (admins) through the web system. Built for <a class=\"link-dark-yellow\" href=\"https://www.inbaytech.com\">inBay Technologies</a>.",
         "image": "https://github.com/liaocanada/davidliao-site/raw/master/github-static/projects/hrms.jpg",
         "type": "work",
+        "category": "web",
         "url": null,
         "skills": ["Java 8", "Spring MVC", "JSP", "HTML5", "CSS", "Bootstrap", "Tomcat", "MySQL"]
     },
@@ -20,6 +22,7 @@
         "description": "A custom website placed on the company's intranet.",
         "image": "https://github.com/liaocanada/davidliao-site/raw/master/github-static/projects/placeholder.jpg",
         "type": "work",
+        "category": "web",
         "url": null,
         "skills": ["Java 8", "Spring MVC", "JSP", "Google Cloud", "HTML5", "CSS", "Bootstrap", "Tomcat"]
     },
@@ -28,6 +31,7 @@
         "description": "My personal website that you are viewing right now! This site was built using Spring MVC and hosted on a VM on AWS.",
         "image": "https://github.com/liaocanada/davidliao-site/raw/master/github-static/projects/davidliao.jpg",
         "type": "personal",
+        "category": "web",
         "url": "https://www.davidliao.ca/",
         "skills": ["Java 8", "Spring MVC", "JSP", "Google Cloud", "HTML5", "CSS", "Bootstrap", "Tomcat"]
     },
@@ -36,6 +40,7 @@
         "description": "A static serverless e-commerce bookstore, which sells mainly books, but other accessories as well (like a blue partyhat -- if you get the reference). It has pie charts displaying key performance indicators like sales by product, sales by author, revenue breakdown (profit, publisher commission, expenditures, delivery fee). Currently it doesn't work 100% when deployed since there are some restrictions to dynamic routing (/orders/[id]) on a static website. The app is deployed across many services on AWS, including S3, CloudFront, API Gateway, Lambda, RDS, and PostgreSQL. ",
         "image": "https://github.com/liaocanada/davidliao-site/raw/master/github-static/projects/bookstore.jpg",
         "type": "personal",
+        "category": "web",
         "url": "http://ebookstore.davidliao.ca/",
         "skills": ["AWS", "AWS API Gateway", "React.js", "Next.js", "React-Bootstrap", "PostgreSQL", "CSS"]
     },
@@ -44,6 +49,7 @@
         "description": "A travel planner which suggests travel destinations, tourist attractions, hotels, and restaurants based on the user's budget for money and time. It also tries to minimize travel distance when moving between travel destinations. When finalized, it will generate a printable itinerary for them to bring on their trip.",
         "image": "https://github.com/liaocanada/davidliao-site/raw/master/github-static/projects/flamingo.png",
         "type": "personal",
+        "category": "desktop",
         "url": null,
         "skills": ["Java 8", "JavaFX", "Google Cloud"]
     },
@@ -52,6 +58,7 @@
         "description": "Planning to learn a new skill, purse a new degree, or just see what's new in the ever-changing tech industry? CareerCounsel will search through hundreds of real-time job postings in your area and tell you just exactly how many jobs are actually looking for a type of education or skill! This project is a React SPA with an EC2 server. In the back, I've also set up continuous deployment (CD) to automatically start a build and deployment process whenever a change is committed on GitHub, for both the front and back-end code.",
         "image": "https://github.com/liaocanada/davidliao-site/raw/master/github-static/projects/careercounsel.jpg",
         "type": "personal",
+        "category": "desktop app",
         "url": "https://app.davidliao.ca",
         "skills": ["React.js", "Node.js", "AWS", "CI/CD", "Webscraping"]
     },
@@ -60,6 +67,7 @@
         "description": "An iOS app which allows users to shoot a projectile using a slingshot-like touch motion, and compare the accuracy of an approximation method (Euler's) with theoretical calculations.",
         "image": "https://img.youtube.com/vi/gTxDxMnFef8/hqdefault.jpg",
         "type": "personal",
+        "category": "mobile",
         "url": "https://www.youtube.com/watch?v=gTxDxMnFef8",
         "skills": ["Swift"]
     },
@@ -68,6 +76,7 @@
         "description": "A simple app which allows the user to create a maze by toggling walls on and off on a grid of buttons, as well as setting the start and end points. Then, it demoes a shortest path algorithm to solve the maze.",
         "image": "https://img.youtube.com/vi/0ovdYHBHpPA/hqdefault.jpg",
         "type": "personal",
+        "category": "mobile",
         "url": "https://www.youtube.com/watch?v=0ovdYHBHpPA",
         "skills": ["Android"]
     },
@@ -76,6 +85,7 @@
         "description": "Your classic game of Hangman on an Arduino! Has a bunch of different categories and word difficulties to choose from. Plays a nice victory tune when you win or a sad tune when you lose.",
         "image": "https://img.youtube.com/vi/Akjvt6dXj7s/hqdefault.jpg",
         "type": "personal",
+        "category": "arduino",
         "url": "https://www.youtube.com/watch?v=Akjvt6dXj7s",
         "skills": ["Arduino"]
     },
@@ -84,6 +94,7 @@
         "description": "An Arduino connected to an LCD screen that displays scrolling text while playing audio, simultaneously on a single thread. Volume adjustable!",
         "image": "https://img.youtube.com/vi/DeEAKgeGLb4/hqdefault.jpg",
         "type": "personal",
+        "category": "arduino",
         "url": "https://www.youtube.com/watch?v=DeEAKgeGLb4",
         "skills": ["Arduino"]
     }
