@@ -3,5 +3,130 @@
 		"name": "Java 8",
 		"colour": "orange",
 		"category": "programming language"
+	},
+	{
+		"name": "JavaScript",
+		"colour": "yellow",
+		"category": "programming language"
+	},
+	{
+		"name": "Swift",
+		"colour": "red",
+		"category": "programming language"
+	},
+	{
+		"name": "Spring MVC",
+		"colour": "green",
+		"category": "backend"
+	},
+	{
+		"name": "React.js",
+		"colour": "blue",
+		"category": "frontend"
+	},
+	{
+		"name": "Meteor.js",
+		"colour": "orange",
+		"category": "backend"
+	},
+	{
+		"name": "Node.js",
+		"colour": "grey",
+		"category": "backend"
+	},
+	{
+		"name": "AWS API Gateway",
+		"colour": "orange",
+		"category": "backend"
+	},
+	{
+		"name": "JavaFX",
+		"colour": "light blue",
+		"category": "backend"
+	},
+	{
+		"name": "Android",
+		"colour": "green",
+		"category": "mobile"
+	},
+	{
+		"name": "Google Cloud",
+		"colour": "green",
+		"category": "cloud platform"
+	},
+	{
+		"name": "AWS",
+		"colour": "orange",
+		"category": "cloud platform"
+	},
+	{
+		"name": "JSP",
+		"colour": "red",
+		"category": "frontend"
+	},
+	{
+		"name": "Next.js",
+		"colour": "grey",
+		"category": "frontend"
+	},
+	{
+		"name": "Bootstrap",
+		"colour": "blue",
+		"category": "frontend"
+	},
+	{
+		"name": "React-Semantic UI",
+		"colour": "light blue",
+		"category": "frontend"
+	},
+	{
+		"name": "React-Bootstrap",
+		"colour": "blue",
+		"category": "frontend"
+	},
+	{
+		"name": "HTML5",
+		"colour": "orange",
+		"category": "frontend"
+	},
+	{
+		"name": "CSS",
+		"colour": "blue",
+		"category": "frontend"
+	},
+	{
+		"name": "XML",
+		"colour": "grey",
+		"category": "frontend"
+	},
+	{
+		"name": "MySQL",
+		"colour": "light blue",
+		"category": "database"
+	},
+	{
+		"name": "MongoDB",
+		"colour": "green",
+		"category": "database"
+	},
+	{
+		"name": "PostgreSQL",
+		"colour": "blue",
+		"category": "database"
+	},
+	{
+		"name": "Tomcat",
+		"colour": "grey",
+		"category": "server"
+	},
+	{
+		"name": "CI/CD",
+		"colour": "green",
+		"category": "process"
+	},
+	{
+		"name": "Webscraping",
+		"colour": "light blue",
+		"category": "process"
 	}
 ]
