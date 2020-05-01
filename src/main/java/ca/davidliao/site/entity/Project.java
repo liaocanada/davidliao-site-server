@@ -2,69 +2,60 @@ package ca.davidliao.site.entity;
 
 import java.util.Set;
 
-/** A basic Entity object (no database connected yet) */
 public class Project {
 	
-	public enum Status { COMPLETED, WORK_IN_PROGRESS, TO_DO }
+	private static int nextId = 1;
 	
-	private static int idCount = 0;
-	
-	private int id;
-	private String title;
-	private String description;
-	private String imageUrl;
-	private Status status;
-	private Set<Skills> skills;
-	// TODO private LocalDate startDate;
-	// private LocalDate endDate;
-	// privat String company;
-	
-	public Project(String title, String description, String imageUrl, Status status, Set<Skills> skills) {
-		this.id = idCount++;
-		this.title = title;
+	private final int id;
+	private final String name;
+	private final String description;
+	private final String imageUrl;
+	private final String type;
+	private final String category;
+	private final String url;
+	private final Set<Skill> skills;
+
+	public Project(String name, String description, String imageUrl, String type, String category, String url,
+			Set<Skill> skills) {
+		super();
+		this.id = nextId++;
+		this.name = name;
 		this.description = description;
 		this.imageUrl = imageUrl;
-		this.status = status;
+		this.type = type;
+		this.category = category;
+		this.url = url;
 		this.skills = skills;
 	}
 	
-	
-	/* Getters and setters */
-	
-	public String getTitle() {
-		return title;
+	@Override
+	public String toString() {
+		return "Project " + name + " making use of " + skills;
 	}
-	public void setTitle(String title) {
-		this.title = title;
+	
+	/* Getters */
+	public int getId() {
+		return id;
+	}
+	public String getName() {
+		return name;
 	}
 	public String getDescription() {
 		return description;
 	}
-	public void setDescription(String description) {
-		this.description = description;
-	}
 	public String getImageUrl() {
 		return imageUrl;
 	}
-	public void setImageUrl(String imageUrl) {
-		this.imageUrl = imageUrl;
+	public String getType() {
+		return type;
 	}
-	public Status getStatus() {
-		return status;
+	public String getCategory() {
+		return category;
 	}
-	public void setStatus(Status status) {
-		this.status = status;
+	public String getUrl() {
+		return url;
 	}
-	public Set<Skills> getSkills() {
+	public Set<Skill> getSkills() {
 		return skills;
-	}
-	public void setSkills(Set<Skills> skills) {
-		this.skills = skills;
-	}
-	
-	public int getId() {
-		return id;
-	}
-	
-		
+	}	
 }

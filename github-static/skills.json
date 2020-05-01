@@ -15,6 +15,11 @@
 		"category": "programming language"
 	},
 	{
+		"name": "Arduino",
+		"colour": "blue",
+		"category": "programming language"
+	},
+	{
 		"name": "Spring MVC",
 		"colour": "green",
 		"category": "backend"
