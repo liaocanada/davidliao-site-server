@@ -21,30 +21,7 @@
 		<div id="projects-row" class="row">
 			<th:block th:each="project: ${ personalProjects }">
 				<div class="col-md-4 thumbnail-wrapper">
-
-					<div class="thumbnail">
-						<img th:src="${ project.image }" alt="Project Image">
-						<div class="caption">
-							<a th:href="@{ ${ project.url }}">
-								<h3 th:text="${ project.name }">
-									Project title goes here
-								</h3>
-							</a>
-							<p th:utext="${ project.description }">Project description goes here</p>
-							<p>
-								<th:block th:each="skill: ${ project.skills }">
-									<a href="#">
-										<span id="skill-tag" 
-											class="label"
-											th:classappend="${ skill.bsTagClass }"
-											th:text="${ skill.name }">
-										</span>
-									</a>
-								</th:block>
-							</p>
-						</div>
-					</div>
-
+					<div th:replace="fragments/projects :: thumbnail (p: 'aa')"></div>
 				</div>
 			</th:block>
 		</div>

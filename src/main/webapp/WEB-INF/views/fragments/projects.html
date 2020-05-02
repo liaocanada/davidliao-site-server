@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<div class="thumbnail" th:fragment="thumbnail (p)">
+	<h1 th:text="${ p }"></h1>
+<!-- 	<img th:src="${ project.image }" alt="Project Image"> -->
+<!-- 	<div class="caption"> -->
+<!-- 		<a th:href="@{ ${ project.url }}"> -->
+<!-- 			<h3 th:text="${ project.name }"> -->
+<!-- 				Project title goes here -->
+<!-- 			</h3> -->
+<!-- 		</a> -->
+<!-- 		<p th:utext="${ project.description }">Project description goes here</p> -->
+<!-- 		<p> -->
+<!-- 			<th:block th:each="skill: ${ project.skills }"> -->
+<!-- 				<a href="#"> -->
+<!-- 					<span id="skill-tag"  -->
+<!-- 						class="label" -->
+<!-- 						th:classappend="${ skill.bsTagClass }" -->
+<!-- 						th:text="${ skill.name }"> -->
+<!-- 					</span> -->
+<!-- 				</a> -->
+<!-- 			</th:block> -->
+<!-- 		</p> -->
+<!-- 	</div> -->
+</div>
