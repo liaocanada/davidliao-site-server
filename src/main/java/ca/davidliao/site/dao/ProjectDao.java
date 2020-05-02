@@ -1,75 +1,87 @@
 package ca.davidliao.site.dao;
 
-import static ca.davidliao.site.entity.Skills.*;
-
-import java.util.Arrays;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
-import java.util.TreeSet;
+import java.util.Set;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import ca.davidliao.site.entity.Project;
-import ca.davidliao.site.entity.Skills;
-import ca.davidliao.site.entity.Project.Status;
+import ca.davidliao.site.entity.Skill;
+import ca.davidliao.site.service.JsonReader;
 
 // @Repository
 public class ProjectDao {
-	
+
 	private List<Project> projects;
-	
-	/** Populates projects array */
+//	private static final String PROJECTS_JSON_URL = "https://raw.githubusercontent.com/liaocanada/davidliao-site/master/github-static/projects.json";
+//	private static final String SKILLS_JSON_URL = "https://raw.githubusercontent.com/liaocanada/davidliao-site/master/github-static/skills.json";
+	private static final String PROJECTS_JSON_URL = "https://raw.githubusercontent.com/liaocanada/davidliao-site/dynamic-projects/github-static/projects.json";
+	private static final String SKILLS_JSON_URL = "https://raw.githubusercontent.com/liaocanada/davidliao-site/dynamic-projects/github-static/skills.json";
+
 	public ProjectDao() {
-		
-		projects = Arrays.asList(
-			new Project("Featured Listings", 
-					"A scalable multi-page React web app that allows specific types of business owners to "
-					+ "present their featured products to customers. Built for "
-					+ "<a class=\"link-dark-yellow\" href=\"https://www.gradea.ca/\">Grade A Labs</a>.", 
-					"featured.jpg",
-					Status.COMPLETED,
-					new TreeSet<Skills>(Arrays.asList(JAVASCRIPT, REACT, METEOR, REACT_SEMANTIC_UI, CSS, MONGODB))),
-				
-			new Project("Human Resources Management System", 
-					"A system that manages employees and their personal information. Users that exist in the "
-					+ "database are able to log in. Basic CRUD functions can be performed on "
-					+ "either the users themselves (non-admins) or other users (admins) "
-					+ "through the web system. Built for "
-					+ "<a class=\"link-dark-yellow\" href=\"https://www.inbaytech.com\">inBay Technologies</a>.",
-					"hrms.jpg", 
-					Status.COMPLETED,
-					new TreeSet<Skills>(Arrays.asList(JAVA_8, SPRING_MVC, JSP, HTML5, CSS, BOOTSTRAP, TOMCAT, MYSQL))),
-			
-			new Project("Company Website", 
-					"A custom website placed on the company's intranet.", 
-					"placeholder.jpg", 
-					Status.COMPLETED,
-					new TreeSet<Skills>(Arrays.asList(JAVA_8, SPRING_MVC, JSP, GOOGLE_CLOUD_PLATFORM, HTML5, CSS, BOOTSTRAP, TOMCAT))),
-			
-			new Project("CareerCounsel", 
-					"A single-page web tool that generates statistics based on real-time job listings. "
-					+ "This project was started and built in 24 hours at Carleton's hackathon, "
-					+ "<a class=\"link-dark-yellow\" href=\"https://cuhacking.com/\">cuHacking</a>. Currently working to "
-					+ "improve the data retrieval and analytics.", 
-					"careercounsel.jpg", 
-					Status.WORK_IN_PROGRESS,
-					new TreeSet<Skills>(Arrays.asList(JAVASCRIPT, REACT, NODE, REACT_SEMANTIC_UI, CSS))),
-			
-			new Project("Personal Website", 
-					"My personal website that you are viewing right now! This site was built using Spring MVC and "
-					+ "hosted on a VM on Google Cloud Platform. Currently looking into migrating from JSP to the newer "
-					+ "Thymeleaf templating engine, and also checking out Amazon AWS.", 
-					"davidliao.jpg", 
-					Status.WORK_IN_PROGRESS,
-					new TreeSet<Skills>(Arrays.asList(JAVA_8, SPRING_MVC, JSP, GOOGLE_CLOUD_PLATFORM, HTML5, CSS, BOOTSTRAP, TOMCAT)))
-			
-		);
-		
+		projects = new ArrayList<Project>();
+		loadProjects();
 	}
-	
-	
+
 	public List<Project> findAll() {
 		return projects;
 	}
-	
+
 	public Project findById(int id) {
 		return projects.get(id);
 	}
+	
+	private void loadProjects() {
+		projects.clear();
+		
+		// Read JSON data from URL
+		JSONArray jsonProjects;
+		JSONArray jsonSkills;
+		try {
+			jsonProjects = JsonReader.readJsonArrayFromUrl(PROJECTS_JSON_URL);
+			jsonSkills = JsonReader.readJsonArrayFromUrl(SKILLS_JSON_URL);
+		} catch (JSONException | IOException e) {
+			e.printStackTrace();
+			return;
+		}
+		
+		jsonProjects.forEach(project -> {
+			JSONObject projectObject = (JSONObject) project;
+			
+			// Populate set of skills
+			Set<Skill> projectSkills = new HashSet<>();
+			projectObject.getJSONArray("skills").forEach(skillStr -> {
+				// Linear search skills by name
+				for (int i = 0; i < jsonSkills.length(); i++) {
+					JSONObject currentSkill = jsonSkills.getJSONObject(i);
+					if (currentSkill.getString("name").equals(skillStr)) {
+						// When found, add details associated with it, and break
+						projectSkills.add(new Skill(
+								currentSkill.getString("name"),
+								currentSkill.getString("colour"),
+								currentSkill.getString("category")
+						));
+						break;
+					}
+				}
+			});
+			
+			// Add new project
+			projects.add(new Project(
+				projectObject.getString("name"), 
+				projectObject.getString("description"), 
+				projectObject.getString("image"), 
+				projectObject.getString("type"), 
+				projectObject.getString("category"),
+				projectObject.optString("url"), 
+				projectSkills
+			));
+		});
+	}
+
 }

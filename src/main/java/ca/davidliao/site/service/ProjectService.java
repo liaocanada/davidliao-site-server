@@ -10,8 +10,6 @@ import java.util.Collection;
 
 import ca.davidliao.site.dao.ProjectDao;
 import ca.davidliao.site.entity.Project;
-import ca.davidliao.site.entity.Skills;
-import ca.davidliao.site.entity.Project.Status;
 
 @Service
 public class ProjectService {
@@ -27,19 +25,22 @@ public class ProjectService {
 		return dao.findAll();
 	}
 	
-	public List<Project> getAllProjects(Status status) {
+	/** Gets all projects of a given type (e.g. personal or work) */
+	public List<Project> getAllProjects(String type) {
 		
 		return dao.findAll().parallelStream()
-				.filter(project -> (project.getStatus() == status))
+				.filter(project -> project.getType().equals(type))
 				.collect(Collectors.toList());
 	}
 	
-	public List<Project> getAllProjects(Skills... skills) {
-		final Collection<Skills> skillsList = Arrays.asList(skills);
-		Predicate<Project> usesSkill = project -> (project.getSkills().containsAll(skillsList));
+	/** Gets all projects that contain all or any of the given skills */
+	public List<Project> getAllProjects(Collection<String> skillsList, boolean requiresAll) {
+		Predicate<Project> filter = requiresAll ? 
+				project -> (project.getSkillsNames().containsAll(skillsList)) :
+				project -> (project.getSkillsNames().parallelStream().anyMatch(skillsList::contains));
 		
 		return dao.findAll().parallelStream()
-				.filter(usesSkill)
+				.filter(filter)
 				.collect(Collectors.toList());
 	}
 }
