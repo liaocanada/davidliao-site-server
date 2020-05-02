@@ -44,6 +44,14 @@ public class Skill {
 		return this.name;
 	}
 	
+	@Override
+	public boolean equals(Object other) {
+		if (!(other instanceof Skill)) return false;
+		
+		Skill otherSkill = (Skill) other;
+		return name.equals(otherSkill.name);
+	}
+	
 	/* Getters */
 	public String getName() {
 		return name;

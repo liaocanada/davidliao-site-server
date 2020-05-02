@@ -77,16 +77,11 @@ public class ProjectDao {
 				projectObject.getString("description"), 
 				projectObject.getString("image"), 
 				projectObject.getString("type"), 
-//				projectObject.getString("category"),
-				"",
+				projectObject.getString("category"),
 				projectObject.optString("url"), 
 				projectSkills
 			));
 		});
 	}
 
-	
-	public static void main(String[] args) {
-		new ProjectDao().findAll().forEach(System.out::println);
-	}
 }

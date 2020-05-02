@@ -7,7 +7,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import ca.davidliao.site.entity.Project.Status;
 import ca.davidliao.site.service.ProjectService;
 
 /**
@@ -46,9 +45,8 @@ public class AppController {
 	
 	@GetMapping("/projects")
 	public String projectsPage(Model model) {
-		model.addAttribute("completedProjects", projectService.getAllProjects(Status.COMPLETED));
-		model.addAttribute("wipProjects", projectService.getAllProjects(Status.WORK_IN_PROGRESS));
-		model.addAttribute("todoProjects", projectService.getAllProjects(Status.TO_DO));
+		model.addAttribute("personalProjects", projectService.getAllProjects("personal"));
+		model.addAttribute("workProjects", projectService.getAllProjects("work"));
 		return "projects";
 	}
 	
