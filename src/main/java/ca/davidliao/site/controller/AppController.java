@@ -55,29 +55,14 @@ public class AppController {
 		return "achievements";
 	}
 	
-	@GetMapping("/shopping-cart")
-	public String newUser() {
-		return "shopping_cart";
+	@GetMapping("/about")
+	public String aboutPage() {
+		return "about";
 	}
 	
 	@GetMapping("/contact")
 	public String contactPage() {
 		return "contact";
-	}
-	
-	@GetMapping("/karaoke")
-	public String karaokePage() {
-		return "karaoke";
-	}
-	
-	@GetMapping("/hangman")
-	public String hangmanPage() {
-		return "hangman";
-	}
-	
-	@GetMapping("/present")
-	public String presentsPage() {
-		return "present";
 	}
 
 }
