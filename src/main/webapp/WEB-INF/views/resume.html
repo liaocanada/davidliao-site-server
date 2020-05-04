@@ -4,15 +4,31 @@
 <head th:include="fragments/resources :: resources">
 </head>
 <head>
-	<title>Resume | David Liao</title>
+<title>Resume | David Liao</title>
 </head>
 
 <body>
 	<div th:replace="fragments/header :: navbar"></div>
 
-	<embed src="https://drive.google.com/viewerng/viewer?embedded=true&amp;url=
-		https://github.com/liaocanada/davidliao-site/raw/master/github-static/DavidLiaoResume.pdf" 
-		width="100%" 
-		height="90%" />
+	<div class="layers-container" style="height: 90%;">
+		<div class="front-layer" style="height: 100%;">
+			<iframe	
+				src="https://docs.google.com/gview?url=https://github.com/liaocanada/davidliao-site/raw/master/github-static/DavidLiaoResume.pdf&embedded=true"
+				style="width: 100%; height: 100%;"></iframe>
+			<!-- 	<embed src="https://github.com/liaocanada/davidliao-site/raw/master/github-static/DavidLiaoResume.pdf"  -->
+			<!-- 		width="100%"  -->
+			<!-- 		height="90%" type="application/pdf" /> -->
+		</div> 
+		
+		<div class="back-layer alert alert-warning alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			Uh oh! If you see this then the iframe didn't load. Try visiting
+			<a th:href="@{https://resume.davidliao.ca}">resume.davidliao.ca</a>
+			instead.
+		</div>
+	</div>
+
 </body>
 </html>

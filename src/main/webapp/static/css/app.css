@@ -41,9 +41,9 @@ html, body {
 }
 
 .bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
+	position: absolute;
+	bottom: 8px;
+	right: 16px;
 }
 
 #home-textbox-container {
@@ -111,7 +111,7 @@ html, body {
 }
 
 #banner-image-description {
-	color:white; 
+	color: white;
 	font-size: x-small;
 }
 
@@ -358,4 +358,20 @@ span.icon-bar {
 	padding-right: 50px;
 	height: 20px;
 	padding-top: 20px;
+}
+
+.layers-container {
+	display: grid !important;
+}
+
+.front-layer {
+	grid-column: 1;
+	grid-row: 1;
+	z-index: 100;
+}
+
+.back-layer {
+	grid-column: 1;
+	grid-row: 1;
+	z-index: 1;
 }
