@@ -375,3 +375,14 @@ span.icon-bar {
 	grid-row: 1;
 	z-index: 1;
 }
+
+.text-major {
+	font-size: 1.3em;
+}
+
+#profile-pic {
+	float: left;
+	border-radius: 10px; 
+	width: 220px;
+	margin: 0 10px 10px 0;
+}
