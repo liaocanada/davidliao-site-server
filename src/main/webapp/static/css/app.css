@@ -380,9 +380,9 @@ span.icon-bar {
 	font-size: 1.3em;
 }
 
-#profile-pic {
-	float: left;
-	border-radius: 10px; 
-	width: 220px;
-	margin: 0 10px 10px 0;
+.wrap-picture {
+	float: right;
+	border-radius: 8px; 
+	width: 230px;
+	margin: 0 0 10px 10px;
 }
