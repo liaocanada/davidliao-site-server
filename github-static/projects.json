@@ -37,7 +37,7 @@
     },
     {
         "name": "Online Bookstore",
-        "description": "A static serverless e-commerce bookstore, which sells mainly books, but other accessories as well (like a blue partyhat -- if you get the reference). It has pie charts displaying key performance indicators like sales by product, sales by author, revenue breakdown (profit, publisher commission, expenditures, delivery fee). Currently it doesn't work 100% when deployed since there are some restrictions to dynamic routing (/orders/[id]) on a static website. The app is deployed serverlessly across various services on AWS.",
+        "description": "A static serverless e-commerce bookstore, which sells books and other accessories. It has pie charts displaying key performance indicators like sales by product, sales by author, revenue breakdown (profit, publisher commission, expenditures, delivery fee). Currently it doesn't work 100% when deployed since there are some restrictions to dynamic routing (/orders/[id]) on a static website. The app is deployed serverlessly across various services on AWS.",
         "image": "https://github.com/liaocanada/davidliao-site/raw/master/github-static/projects/bookstore.jpg",
         "type": "personal",
         "category": "web",
