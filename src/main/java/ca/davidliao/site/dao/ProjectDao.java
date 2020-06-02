@@ -18,10 +18,8 @@ import ca.davidliao.site.service.JsonReader;
 public class ProjectDao {
 
 	private List<Project> projects;
-//	private static final String PROJECTS_JSON_URL = "https://raw.githubusercontent.com/liaocanada/davidliao-site/master/github-static/projects.json";
-//	private static final String SKILLS_JSON_URL = "https://raw.githubusercontent.com/liaocanada/davidliao-site/master/github-static/skills.json";
-	private static final String PROJECTS_JSON_URL = "https://raw.githubusercontent.com/liaocanada/davidliao-site/dynamic-projects/github-static/projects.json";
-	private static final String SKILLS_JSON_URL = "https://raw.githubusercontent.com/liaocanada/davidliao-site/dynamic-projects/github-static/skills.json";
+	private static final String PROJECTS_JSON_URL = "https://raw.githubusercontent.com/liaocanada/davidliao-site/master/github-static/projects.json";
+	private static final String SKILLS_JSON_URL = "https://raw.githubusercontent.com/liaocanada/davidliao-site/master/github-static/skills.json";
 
 	public ProjectDao() {
 		projects = new ArrayList<Project>();
@@ -29,6 +27,7 @@ public class ProjectDao {
 	}
 
 	public List<Project> findAll() {
+		loadProjects();
 		return projects;
 	}
 
