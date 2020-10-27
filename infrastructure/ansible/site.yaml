@@ -1,3 +1,5 @@
+# NOTE: may cause brief downtime
+
 - name: Deploy web server for the portfolio site
   hosts: all
   become: yes
@@ -67,6 +69,11 @@
         dest: /etc/systemd/system/tomcat.service
 
     # Deploy the site
+    - name: Remove old root artifact
+      file:
+        path: "/opt/tomcat/apache-tomcat-{{ tomcat_version }}/webapps/ROOT"
+        state: absent
+
     - name: Ensure WAR file is downloaded and up to date
       synchronize:
         src: ./resources/ROOT.war
@@ -103,7 +110,7 @@
       synchronize:
         src: ./resources/resume.conf
         dest: /etc/nginx/conf.d/
-    
+
     # - name: Ensure symlink is created from conf-enabled to conf-available
     #   file:
     #     src: /etc/apache2/conf-available/davidliao.conf
@@ -122,4 +129,3 @@
     # sudo ln -s /snap/bin/certbot /usr/bin/certbot
     # sudo certbot --nginx
     # sudo certbot renew --dry-run
-    
