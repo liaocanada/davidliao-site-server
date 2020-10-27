@@ -19,6 +19,7 @@
       apt:
         name: default-jdk
         state: present
+        update_cache: yes
 
     # Tomcat user + group
     - name: Ensure tomcat group is created
