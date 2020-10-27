@@ -36,28 +36,28 @@
         shell: /bin/false
 
     # Tomcat 8
-    - name: Ensure Tomcat archive is downloaded
-      get_url:
-        url: "http://archive.apache.org/dist/tomcat/tomcat-{{ tomcat_version_major }}/v{{ tomcat_version }}/bin/apache-tomcat-{{ tomcat_version }}.tar.gz"
-        dest: "/opt/apache-tomcat-{{ tomcat_version }}.tar.gz"
-
     - name: Ensure Tomcat directory is created
       file:
-        path: /opt/tomcat/latest
+        path: /opt/tomcat
         owner: tomcat
         group: tomcat
         state: directory
 
-    - name: Ensure archive is extracted
-      command: "tar xvf /opt/apache-tomcat-{{ tomcat_version }}.tar.gz -C /opt/tomcat/"
-      args:
-        creates: "/opt/tomcat/apache-tomcat-{{ tomcat_version }}"
+    - name: Ensure archive is downloaded and extracted
+      unarchive: 
+        src: "http://archive.apache.org/dist/tomcat/tomcat-{{ tomcat_version_major }}/v{{ tomcat_version }}/bin/apache-tomcat-{{ tomcat_version }}.tar.gz"
+        remote_src: yes
+        dest: /opt/tomcat
+        owner: tomcat
+        group: tomcat
 
     - name: Ensure symlink from latest to extracted directory
       file:
-        src: /opt/tomcat/latest
-        dest: "/opt/tomcat/apache-tomcat-{{ tomcat_version }}"
+        src: "/opt/tomcat/apache-tomcat-{{ tomcat_version }}"
+        dest: /opt/tomcat/latest
         state: link
+        owner: tomcat
+        group: tomcat
 
     - name: Ensure Tomcat is registered as a service
       template:
