@@ -1,4 +1,5 @@
 # Running the playbook
+`cd ./infrastructure/ansible`
 `ansible-playbook -i inventory.txt site.yaml`
 If installed with pip, bin can be found at `$HOME/.local/bin/`
 
