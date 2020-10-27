@@ -97,19 +97,22 @@
         state: absent
 
     - name: Ensure Nginx reverse proxy is configured
-      synchronize:
+      copy:
         src: ./resources/davidliao.conf
         dest: /etc/nginx/conf.d/
+        force: no
 
     - name: Ensure resume HTML is created
-      synchronize:
+      copy:
         src: ./resources/resume.html
         dest: /var/www/html/
+        force: no
 
     - name: Ensure Nginx configuration for resume HTML is created
-      synchronize:
+      copy:
         src: ./resources/resume.conf
         dest: /etc/nginx/conf.d/
+        force: no
 
     # - name: Ensure symlink is created from conf-enabled to conf-available
     #   file:
@@ -117,6 +120,7 @@
     #     dest: /etc/apache2/conf-enabled/davidliao.conf
     #     state: link
 
+    # TODO only restart if changed
     - name: Restart Nginx
       service:
         name: nginx
