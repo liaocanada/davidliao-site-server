@@ -87,13 +87,8 @@
         dest: "/opt/tomcat/apache-tomcat-{{ tomcat-version }}/webapps/ROOT/"
         copy: no
         mode: 0755
-        owner: tomcat 
-        group: tomcat7
-
-    - name: Delete WAR
-      file:
-        path: /tmp/ROOT.war
-        state: absent
+        owner: tomcat
+        group: tomcat
 
     - name: Restart Tomcat
       systemd:
