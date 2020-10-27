@@ -77,31 +77,30 @@
         state: restarted
         enabled: yes
 
-    # Apache web server
-    - name: Ensure Apache is installed
+    # Nginx web server
+    - name: Ensure Nginx is installed
       apt:
-        name: apache2 # httpd
+        name: nginx
         state: present
-        enabled: yes
 
-    - name: Ensure Apache reverse proxy is configured
-      blockinfile:
-        path: /etc/httpd/conf/httpd.conf
-        block: |
-          <VirtualHost *:80>
-            ProxyPreserveHost On
-            ProxyRequests Off
-            ServerName www.davidliao.ca
-            ServerAlias davidliao.ca
-            ProxyPass / http://localhost:8080/
-            ProxyPassReverse / http://localhost:8080/
-          </VirtualHost>
+    - name: Ensure default pages are removed
+      file:
+        path: /var/www/html/index.nginx-debian.html
+        state: absent
 
-    - name: Restart Apache
+    - name: Ensure Nginx reverse proxy is configured
+      synchronize:
+        src: ./resources/davidliao.conf
+        dest: /etc/nginx/conf.d/
+
+    # - name: Ensure symlink is created from conf-enabled to conf-available
+    #   file:
+    #     src: /etc/apache2/conf-available/davidliao.conf
+    #     dest: /etc/apache2/conf-enabled/davidliao.conf
+    #     state: link
+
+    - name: Restart Nginx
       service:
-        name: apache2 # httpd
+        name: nginx
         state: restarted
-
-    # Test site
-    - name: curl localhost
-      uri: url=http://localhost
+        enabled: yes
