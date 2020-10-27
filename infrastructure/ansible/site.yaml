@@ -44,7 +44,7 @@
         state: directory
 
     - name: Ensure archive is downloaded and extracted
-      unarchive: 
+      unarchive:
         src: "http://archive.apache.org/dist/tomcat/tomcat-{{ tomcat_version_major }}/v{{ tomcat_version }}/bin/apache-tomcat-{{ tomcat_version }}.tar.gz"
         remote_src: yes
         dest: /opt/tomcat
@@ -82,7 +82,7 @@
         dest: /tmp/ROOT.war
 
     - name: Unzip WAR
-      unarchive: 
+      unarchive:
         src: /tmp/ROOT.war
         dest: "/opt/tomcat/apache-tomcat-{{ tomcat-version }}/webapps/ROOT/"
         copy: no
@@ -97,8 +97,8 @@
 
     # Apache web server
     - name: Ensure Apache is installed
-      apt: 
-        name: apache2  # httpd
+      apt:
+        name: apache2 # httpd
         state: present
         enabled: yes
 
@@ -117,7 +117,7 @@
 
     - name: Restart Apache
       service:
-        name: apache2  # httpd
+        name: apache2 # httpd
         state: restarted
 
     # Test site
