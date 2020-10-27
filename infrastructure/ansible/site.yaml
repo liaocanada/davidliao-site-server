@@ -51,12 +51,12 @@
     - name: Ensure archive is extracted
       command: "tar xvf /opt/apache-tomcat-{{ tomcat_version }}.tar.gz -C /opt/tomcat/"
       args:
-        creates: /opt/tomcat/apache-tomcat-{{ tomcat_version }}
+        creates: "/opt/tomcat/apache-tomcat-{{ tomcat_version }}"
 
     - name: Ensure symlink from latest to extracted directory
       file:
         src: /opt/tomcat/latest
-        dest: /opt/tomcat/apache-tomcat-{{ tomcat_version }}
+        dest: "/opt/tomcat/apache-tomcat-{{ tomcat_version }}"
         state: link
 
     - name: Ensure Tomcat is registered as a service
@@ -88,7 +88,7 @@
     - name: Unzip WAR
       unarchive: 
         src: /tmp/ROOT.war
-        dest: /opt/tomcat/apache-tomcat-{{ tomcat-version }}/webapps/ROOT/
+        dest: "/opt/tomcat/apache-tomcat-{{ tomcat-version }}/webapps/ROOT/"
         copy: no
         mode: 0755
         owner: tomcat 
