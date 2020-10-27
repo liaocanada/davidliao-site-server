@@ -21,6 +21,11 @@
         state: present
 
     # Tomcat user + group
+    - name: Ensure tomcat group is created
+      group:
+        name: tomcat
+        state: present
+
     - name: Ensure tomcat user is created and owner of /opt/tomcat
       user:
         name: tomcat
