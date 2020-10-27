@@ -48,6 +48,7 @@
         src: "http://archive.apache.org/dist/tomcat/tomcat-{{ tomcat_version_major }}/v{{ tomcat_version }}/bin/apache-tomcat-{{ tomcat_version }}.tar.gz"
         remote_src: yes
         dest: /opt/tomcat
+        creates: /opt/tomcat/apache-tomcat-{{ tomcat_version }}
         owner: tomcat
         group: tomcat
 
@@ -64,22 +65,28 @@
         src: ./resources/tomcat.service.j2
         dest: /etc/systemd/system/tomcat.service
 
-    - name: Ensure Tomcat is started and enabled
-      systemd:
-        daemon_reload: yes
-        name: tomcat
-        state: started
-        enabled: yes
-
-    # - name: Wait for availability
-    #   wait_for:
-    #     port: 8080
-
-    # Deploy WAR file
-    - name: Download WAR
+    # Deploy the site
+    - name: Ensure WAR file is downloaded and up to date
       synchronize:
         src: ./resources/ROOT.war
         dest: /tmp/ROOT.war
+
+    - name: Stop Tomcat
+      systemd:
+        name: tomcat
+        state: stopped
+
+    - name: Make sure ROOT folder is deleted
+      file:
+        path: "/opt/tomcat/apache-tomcat-{{ tomcat-version }}/webapps/ROOT/"
+        state: absent
+
+    - name: Make sure ROOT folder is created (empty)
+      file:
+        path: "/opt/tomcat/apache-tomcat-{{ tomcat-version }}/webapps/ROOT/"
+        owner: tomcat
+        group: tomcat
+        state: directory
 
     - name: Unzip WAR
       unarchive:
@@ -94,6 +101,7 @@
       systemd:
         name: tomcat
         state: restarted
+        enabled: yes
 
     # Apache web server
     - name: Ensure Apache is installed
