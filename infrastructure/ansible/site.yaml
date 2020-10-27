@@ -1,0 +1,129 @@
+- name: Deploy web server for the portfolio site
+  hosts: all
+  become: yes
+  become_user: root
+
+  vars:
+    tomcat_version: 8.5.59
+    tomcat_version_major: 8
+
+  tasks:
+    # Begin
+    - name: Echo date
+      command: date
+      register: date
+    - debug: var=date.stdout_lines
+
+    # Java
+    - name: Ensure Java is installed
+      apt:
+        name: default-jdk
+        state: present
+
+    # Tomcat user + group
+    - name: Ensure tomcat user is created and owner of /opt/tomcat
+      user:
+        name: tomcat
+        group: tomcat
+        create_home: yes
+        home: /opt/tomcat
+        system: yes
+        shell: /bin/false
+
+    # Tomcat 8
+    - name: Ensure Tomcat archive is downloaded
+      get_url:
+        url: "http://archive.apache.org/dist/tomcat/tomcat-{{ tomcat_version_major }}/v{{ tomcat_version }}/bin/apache-tomcat-{{ tomcat_version }}.tar.gz"
+        dest: "/opt/apache-tomcat-{{ tomcat_version }}.tar.gz"
+
+    - name: Ensure Tomcat directory is created
+      file:
+        path: /opt/tomcat/latest
+        owner: tomcat
+        group: tomcat
+        state: directory
+
+    - name: Ensure archive is extracted
+      command: "tar xvf /opt/apache-tomcat-{{ tomcat_version }}.tar.gz -C /opt/tomcat/"
+      args:
+        creates: /opt/tomcat/apache-tomcat-{{ tomcat_version }}
+
+    - name: Ensure symlink from latest to extracted directory
+      file:
+        src: /opt/tomcat/latest
+        dest: /opt/tomcat/apache-tomcat-{{ tomcat_version }}
+        state: link
+
+    - name: Ensure Tomcat is registered as a service
+      template:
+        src: ./resources/tomcat.service.j2
+        dest: /etc/systemd/system/tomcat.service
+
+    - name: Ensure Tomcat is started
+      systemd:
+        daemon_reload: yes
+        name: tomcat
+        state: started
+
+    - name: Ensure Tomcat is enabled
+      systemd:
+        name: tomcat
+        state: enabled
+
+    # - name: Wait for availability
+    #   wait_for:
+    #     port: 8080
+
+    # Deploy WAR file
+    - name: Download WAR
+      synchronize:
+        src: ./resources/ROOT.war
+        dest: /tmp/ROOT.war
+
+    - name: Unzip WAR
+      unarchive: 
+        src: /tmp/ROOT.war
+        dest: /opt/tomcat/apache-tomcat-{{ tomcat-version }}/webapps/ROOT/
+        copy: no
+        mode: 0755
+        owner: tomcat 
+        group: tomcat7
+
+    - name: Delete WAR
+      file:
+        path: /tmp/ROOT.war
+        state: absent
+
+    - name: Restart Tomcat
+      systemd:
+        name: tomcat
+        state: restarted
+
+    # Apache web server
+    - name: Ensure Apache is installed
+      apt: 
+        name: apache2  # httpd
+        state: present
+        enabled: yes
+
+    - name: Ensure Apache reverse proxy is configured
+      blockinfile:
+        path: /etc/httpd/conf/httpd.conf
+        block: |
+          <VirtualHost *:80>
+            ProxyPreserveHost On
+            ProxyRequests Off
+            ServerName www.davidliao.ca
+            ServerAlias davidliao.ca
+            ProxyPass / http://localhost:8080/
+            ProxyPassReverse / http://localhost:8080/
+          </VirtualHost>
+
+    - name: Restart Apache
+      service:
+        name: apache2  # httpd
+        state: restarted
+
+    # Test site
+    - name: curl localhost
+      uri: url=http://localhost
