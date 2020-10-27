@@ -93,6 +93,16 @@
         src: ./resources/davidliao.conf
         dest: /etc/nginx/conf.d/
 
+    - name: Ensure resume HTML is created
+      synchronize:
+        src: ./resources/resume.html
+        dest: /var/www/html/
+
+    - name: Ensure Nginx configuration for resume HTML is created
+      synchronize:
+        src: ./resources/resume.conf
+        dest: /etc/nginx/conf.d/
+    
     # - name: Ensure symlink is created from conf-enabled to conf-available
     #   file:
     #     src: /etc/apache2/conf-available/davidliao.conf
