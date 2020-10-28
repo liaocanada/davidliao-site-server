@@ -8,6 +8,7 @@
   vars:
     tomcat_version: 8.5.59
     tomcat_version_major: 8
+    update_nginx_conf: no # If yes, will have to update certbot manually afterwards
 
   tasks:
     # Begin
@@ -100,19 +101,19 @@
       copy:
         src: ./resources/davidliao.conf
         dest: /etc/nginx/conf.d/
-        force: no
+        force: "{{ update_nginx_conf }}"
 
     - name: Ensure resume HTML is created
       copy:
         src: ./resources/resume.html
         dest: /var/www/html/
-        force: no
+        force: "{{ update_nginx_conf }}"
 
     - name: Ensure Nginx configuration for resume HTML is created
       copy:
         src: ./resources/resume.conf
         dest: /etc/nginx/conf.d/
-        force: no
+        force: "{{ update_nginx_conf }}"
 
     # - name: Ensure symlink is created from conf-enabled to conf-available
     #   file:
