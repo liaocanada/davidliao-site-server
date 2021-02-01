@@ -108,11 +108,11 @@
         dest: /etc/nginx/conf.d/
         force: "{{ update_nginx_conf }}"
 
-    - name: Ensure resume HTML is created
+    - name: Ensure resume HTML is up to date
       copy:
         src: ./resources/resume.html
         dest: /var/www/html/
-        force: "{{ update_nginx_conf }}"
+        force: yes
 
     - name: Ensure Nginx configuration for resume HTML is created
       copy:
