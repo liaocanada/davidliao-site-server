@@ -16,11 +16,23 @@
     document.addEventListener("adobe_dc_view_sdk.ready", function () {
       // Client ID is not sensitive, only usable on resume.davidliao.ca
       var adobeDCView = new AdobeDC.View({ clientId: "4b2bfbfa220b48828670f21f4f7a129b", divId: "adobe-dc-view" });
-      adobeDCView.previewFile(
+      var previewFilePromise = adobeDCView.previewFile(
         {
           content: { location: { url: "https://cdn.jsdelivr.net/gh/liaocanada/davidliao-site/github-static/DavidLiao-Resume.pdf" } },
           metaData: { fileName: "David's Resume" }
         }, { embedMode: "LIGHT_BOX" });
+
+      previewFilePromise.then(adobeViewer => {
+        adobeViewer.getAPIs().then(apis => {
+          apis.getZoomAPIs().getZoomLimits()
+            .then(result => console.log("Minimum and maximum zoom limit of the PDF: ", result))
+            .catch(error => console.error(error));
+
+          apis.getZoomAPIs().setZoomLevel(1.2)
+            .then(result => console.log("Zoom level:", result))
+            .catch(error => console.error(error));
+        });
+      });
     });
   </script>
 </body>
